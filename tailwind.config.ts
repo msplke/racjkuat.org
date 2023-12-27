@@ -1,9 +1,9 @@
-import type { Config } from "tailwindcss";
+import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-const config = {
+export default {
+  content: ["./src/**/*.{ts,tsx}", "./content/**/*.{md,mdx}"],
   darkMode: ["class"],
-  content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -55,8 +55,16 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        cal: ["var(--font-cal)", ...fontFamily.sans],
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        heading: ["var(--font-heading)", ...fontFamily.sans],
+      },
+      typography: {
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -74,7 +82,5 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
-
-export default config;
