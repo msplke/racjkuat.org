@@ -16,10 +16,10 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const mysqlTable = mysqlTableCreator((name) => `racjkuat.org_${name}`);
+export const mysqlTable = mysqlTableCreator((name) => `racjkuat_${name}`);
 
 export const posts = mysqlTable(
-  "post",
+  "posts",
   {
     id: bigint("id", { mode: "number" }).primaryKey().autoincrement(),
     name: varchar("name", { length: 256 }),
