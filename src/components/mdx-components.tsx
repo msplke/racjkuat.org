@@ -2,15 +2,14 @@ import Image from "next/image";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 import { Callout } from "~/components/callout";
-import { MdxCard } from "~/components/mdx-card";
 import { cn } from "~/lib/utils";
-
-interface MdxProps {
-  code: string;
-}
 
 interface ComponentProps {
   className: string;
+}
+
+interface MdxProps {
+  code: string;
 }
 
 const components = {
@@ -26,7 +25,7 @@ const components = {
   h2: ({ className, ...props }: ComponentProps) => (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 font-semibold tracking-tight first:mt-0 sm:text-3xl",
+        "mt-10 scroll-m-20 border-b pb-1 font-semibold tracking-tight first:mt-0 sm:text-3xl",
         className,
       )}
       {...props}
@@ -68,7 +67,6 @@ const components = {
       {...props}
     />
   ),
-  hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
   a: ({ className, ...props }: ComponentProps) => (
     <a
       className={cn("font-medium underline underline-offset-4", className)}
@@ -76,13 +74,16 @@ const components = {
     />
   ),
   p: ({ className, ...props }: ComponentProps) => (
-    <p className={cn("leading-7", className)} {...props} />
+    <p
+      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      {...props}
+    />
   ),
   ul: ({ className, ...props }: ComponentProps) => (
-    <ul className={cn("my-6 list-disc", className)} {...props} />
+    <ul className={cn("my-6 ml-6 list-disc", className)} {...props} />
   ),
   ol: ({ className, ...props }: ComponentProps) => (
-    <ol className={cn("my-6 list-decimal", className)} {...props} />
+    <ol className={cn("my-6 ml-6 list-decimal", className)} {...props} />
   ),
   li: ({ className, ...props }: ComponentProps) => (
     <li className={cn("mt-2", className)} {...props} />
@@ -90,7 +91,7 @@ const components = {
   blockquote: ({ className, ...props }: ComponentProps) => (
     <blockquote
       className={cn(
-        "prose-quoteless mt-6 border-l-2 pl-6 [&>*]:text-muted-foreground",
+        "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
         className,
       )}
       {...props}
@@ -104,6 +105,7 @@ const components = {
     // eslint-disable-next-line @next/next/no-img-element
     <img className={cn("rounded-md border", className)} alt={alt} {...props} />
   ),
+  hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
       <table className={cn("w-full", className)} {...props} />
@@ -143,11 +145,16 @@ const components = {
     />
   ),
   code: ({ className, ...props }: ComponentProps) => (
-    <code className={cn("font-mono text-xs", className)} {...props} />
+    <code
+      className={cn(
+        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        className,
+      )}
+      {...props}
+    />
   ),
   Image,
   Callout,
-  Card: MdxCard,
 };
 
 export function Mdx({ code }: MdxProps) {
