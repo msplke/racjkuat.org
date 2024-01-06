@@ -3,7 +3,7 @@ import {
   makeSource,
   type ComputedFields,
 } from "contentlayer/source-files";
-// import rehypePrettyCode from "rehype-pretty-code";
+import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 
 const computedFields: ComputedFields = {
@@ -102,7 +102,7 @@ export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Author, Page, Post],
   mdx: {
-    // rehypePlugins: [[rehypePrettyCode, { theme: "poimandres" }]],
+    rehypePlugins: [[rehypePrettyCode, { theme: "poimandres" }]],
     remarkPlugins: [remarkGfm],
   },
 });
