@@ -23,14 +23,14 @@
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "incremental": true,
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
 
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
-    },
-    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+    }
   },
   "include": [
     "**/*.ts",

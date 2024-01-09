@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
   authors: [{ name: "Peter Kibuchi", url: "https://www.peterkibuchi.com" }],
   keywords: ["Rotaract", "Rotary"],
   links: {
-    github: "https://github.com/msplke/racjkuat.org",
+    github: "https://github.com/peterkibuchi/racjkuat.org",
     instagram: "https://instagram.com/racjkuat",
     tiktok: "https://tiktok.com/racjkuat",
     twitter: "https://twitter.com/racjkuat",
