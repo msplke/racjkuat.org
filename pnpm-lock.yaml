@@ -45,8 +45,8 @@ dependencies:
     specifier: ^0.3.4
     version: 0.3.4(esbuild@0.19.10)
   date-fns:
-    specifier: ^3.2.0
-    version: 3.2.0
+    specifier: ^3.3.0
+    version: 3.3.0
   drizzle-orm:
     specifier: ^0.29.3
     version: 0.29.3(@libsql/client@0.4.0-pre.7)(@opentelemetry/api@1.7.0)(@types/react@18.2.48)(react@18.2.0)
@@ -2707,8 +2707,8 @@ packages:
     engines: {node: '>= 12'}
     dev: false
 
-  /date-fns@3.2.0:
-    resolution: {integrity: sha512-E4KWKavANzeuusPi0jUjpuI22SURAznGkx7eZV+4i6x2A+IZxAMcajgkvuDAU1bg40+xuhW1zRdVIIM/4khuIg==}
+  /date-fns@3.3.0:
+    resolution: {integrity: sha512-xuouT0GuI2W8yXhCMn/AXbSl1Av3wu2hJXxMnnILTY3bYY0UgNK0qOwVXqdFBrobW5qbX1TuOTgMw7c2H2OuhA==}
     dev: false
 
   /debug@3.2.7:
