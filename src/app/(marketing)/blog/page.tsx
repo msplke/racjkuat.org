@@ -24,13 +24,14 @@ export default function BlogPage() {
             Blog
           </h1>
           <p className="text-xl text-muted-foreground">
-            A blog built using Contentlayer. Posts are written in MDX.
+            Official club announcements & updates, as well as member
+            contributions.
           </p>
         </div>
       </div>
       <hr className="my-8" />
       {posts?.length ? (
-        <div className="grid gap-10 sm:grid-cols-2">
+        <div className="grid gap-10 sm:grid-cols-1">
           {posts.map((post, index) => (
             <article
               key={post._id}

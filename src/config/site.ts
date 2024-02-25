@@ -15,14 +15,14 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Rotaract Club of JKUAT",
+  name: "RacJkuat",
   url: "https://racjkuat.vercel.app",
   description: "Home to the Rotaract Club of Jkuat. Create Hope in the World.",
   creator: "Peter Kibuchi",
   authors: [{ name: "Peter Kibuchi", url: "https://www.peterkibuchi.com" }],
   keywords: ["Rotaract", "Rotary"],
   links: {
-    github: "https://github.com/peterkibuchi/racjkuat.org",
+    github: "https://github.com/msplke/racjkuat.org",
     instagram: "https://instagram.com/racjkuat",
     tiktok: "https://tiktok.com/racjkuat",
     twitter: "https://twitter.com/racjkuat",

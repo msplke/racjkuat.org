@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { Icons } from "~/components/icons";
 import { ModeToggle } from "~/components/mode-toggle";
+import { buttonVariants } from "~/components/ui/button";
+import { footerItems } from "~/config/marketing";
 import { cn } from "~/lib/utils";
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
@@ -12,29 +14,25 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Icons.logo />
           <p className="text-center text-sm leading-loose md:text-left">
-            Crafted with ❤️ by{" "}
-            <Link
-              href="https://linkedin.com/in/peterkibuchi"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Peter Kibuchi
-            </Link>
-            .
-            {/* The source code is available on{" "}
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </Link>
-            . */}
+            © {new Date().getFullYear()} Rotaract Club of JKUAT. All rights
+            reserved.
           </p>
         </div>
 
+        <div className="ml-auto text-sm text-primary">
+          {footerItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.disabled ? "#" : item.href}
+              target="_blank"
+              referrerPolicy="no-referrer"
+              className={buttonVariants({ variant: "ghost" })}
+            >
+              <item.icon className="h-5 w-5" />
+              <span className="sr-only">{item.title}</span>
+            </Link>
+          ))}
+        </div>
         <ModeToggle />
       </div>
     </footer>
