@@ -9,8 +9,8 @@ dependencies:
     specifier: ^4.29.7
     version: 4.29.7(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
   '@libsql/client':
-    specifier: 0.5.0
-    version: 0.5.0
+    specifier: 0.5.2
+    version: 0.5.2
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.56)(react@18.2.0)
@@ -49,7 +49,7 @@ dependencies:
     version: 3.3.1
   drizzle-orm:
     specifier: ^0.29.3
-    version: 0.29.3(@libsql/client@0.5.0)(@opentelemetry/api@1.7.0)(@types/react@18.2.56)(react@18.2.0)
+    version: 0.29.3(@libsql/client@0.5.2)(@opentelemetry/api@1.7.0)(@types/react@18.2.56)(react@18.2.0)
   lucide-react:
     specifier: ^0.331.0
     version: 0.331.0(react@18.2.0)
@@ -1166,35 +1166,35 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@libsql/client@0.5.0:
-    resolution: {integrity: sha512-fePr9UH9iifRFc3ZCjMTAzClLCJ2C3r6tXOamsliet9esuq0q2hg5/nCsjkjgLu4dAC80ufvXNvB0ccKusX1tg==}
+  /@libsql/client@0.5.2:
+    resolution: {integrity: sha512-aHnYjsqE4QWhb+HdJj2HtLw6QBt61veSu6IQgFO5rxzdY/rb69YAgYF0ZvpVoMn12B/t9U9U7H3ow/IADo4Yhg==}
     dependencies:
-      '@libsql/core': 0.5.0
+      '@libsql/core': 0.5.2
       '@libsql/hrana-client': 0.5.6
       js-base64: 3.7.5
-      libsql: 0.3.1
+      libsql: 0.3.2
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - utf-8-validate
     dev: false
 
-  /@libsql/core@0.5.0:
-    resolution: {integrity: sha512-9alQ+ihYHgOyf3oPBUEuNH/y5Y2TM2BacaXO7QHnExpQjnQwxHTjie/uHkxIZ3vTSdbzPvt2sGiyedHyDKBqhA==}
+  /@libsql/core@0.5.2:
+    resolution: {integrity: sha512-sBo55JJXRiggymOy91MvI+lJ15U8BdWBHytAeszpebhhbrkuTfd+5jDoB3sSZ0dMH0NIPAVQEEQnQldAO+SDXg==}
     dependencies:
       js-base64: 3.7.5
     dev: false
 
-  /@libsql/darwin-arm64@0.3.1:
-    resolution: {integrity: sha512-Yf8jFf6DHHTj7jtfjTTZPirYjwwqzMEUYmUlQvbEtlcRYNpj6N000atEfbvSRBOMx7stOqPQlymQZ2020xSKjw==}
+  /@libsql/darwin-arm64@0.3.2:
+    resolution: {integrity: sha512-w5CTHTM7mBovE0W3Sz/71DPF1fmfQFZtAFCHz+TI+X19PLNFsozBD73xkHdpX4fED5+NejCI58Q8sNYj6g26QQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/darwin-x64@0.3.1:
-    resolution: {integrity: sha512-4dciW+z1SBIfl6Oxec1t1cofaBYTP/xFcIZMJwfdaYuukwJFhKTIBjxS2ex048RGL86SpBPRR//ZDBi95kEYlA==}
+  /@libsql/darwin-x64@0.3.2:
+    resolution: {integrity: sha512-2Ts7uzeKgZ7MFMxaRFpokr8cAsut7jbi2PIWyCq/XmPpWrQUZBEnNCEwuJMVbj+yew6lf4E3PGQlRHJDLIds/A==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
@@ -1233,40 +1233,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@libsql/linux-arm64-gnu@0.3.1:
-    resolution: {integrity: sha512-7Ap1iZKSdPDWp47FnPgHDYhrwQ3lGFXRYEqMhD4YqI1BO5ywBcV564DkWVH4xIGA5fNsVDo0zaerVztWDNdJyQ==}
+  /@libsql/linux-arm64-gnu@0.3.2:
+    resolution: {integrity: sha512-dwOQSJCst7FgMAB19NY037nJUTpmREKBgk86Fx/cv0Ins9XArvlwLqtJ41gZUWsbgxSP/Zm6CPdfFtt0P5RzTA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-arm64-musl@0.3.1:
-    resolution: {integrity: sha512-bUAYqeyyr34J9SlBDdletpuUDp5jQrZ4B3Maqr9Hyut0nhN+raCa5Hno73W85GaFYmXgE5rCbMHDtcs0OLGMdQ==}
+  /@libsql/linux-arm64-musl@0.3.2:
+    resolution: {integrity: sha512-OEHMfqq7+FFExtjPu1nMBN55wjPrVYdii/4n4l0Z+InHKtZciFJIVJ8sYfe64L1szZ7TrLWsi2fEmOL16ZonjQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-gnu@0.3.1:
-    resolution: {integrity: sha512-7A3BtwLdJHjXB8kFuAtLmND66da8RwVeIfY1rRivDEyintv/HvXFmj+coIfniuO1xKvJtfaoJ8j2Fa5lObOnDg==}
+  /@libsql/linux-x64-gnu@0.3.2:
+    resolution: {integrity: sha512-dVeM9S0x2ImtKBuOcq2K4Xqd/IyMYD5BSdwmOxOFQ3lPAkE0q4YtRhvaJ00ZWaesG5/iarZE7uJA7x2xmxEOWw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-musl@0.3.1:
-    resolution: {integrity: sha512-CyIhvt+t19yvT/y6wFkkFN2KA7ixmInWuHv1EP7hYXuGC7hXs1oAW8+5Sp2MGQdyVQRcenWyYp176nwjNBi12A==}
+  /@libsql/linux-x64-musl@0.3.2:
+    resolution: {integrity: sha512-XG812Z/zXqx1m+pTjVtdBah2WvsvrmGE55dO4pXuRJKyvpPb5qg8m/t3PaKhtA9KDru9laP24+xCMyUWYnqkjw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/win32-x64-msvc@0.3.1:
-    resolution: {integrity: sha512-o3pqBYP0GbnpkKOSNiRYPa5Z+L3mG5C1vIxcPEAkiXExSXfyYpKoridffyZsw47MhU4ZHLdoXFB35VLIIRmyhg==}
+  /@libsql/win32-x64-msvc@0.3.2:
+    resolution: {integrity: sha512-IMcfr1fV8o9PalLeozGF5AegZEPSriiXKT9vn5JEWk0Pc6Fm4LX3UVqwO47XTdJf/vJuizxZgxeWrlmm26shKA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -2945,7 +2945,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.3(@libsql/client@0.5.0)(@opentelemetry/api@1.7.0)(@types/react@18.2.56)(react@18.2.0):
+  /drizzle-orm@0.29.3(@libsql/client@0.5.2)(@opentelemetry/api@1.7.0)(@types/react@18.2.56)(react@18.2.0):
     resolution: {integrity: sha512-uSE027csliGSGYD0pqtM+SAQATMREb3eSM/U8s6r+Y0RFwTKwftnwwSkqx3oS65UBgqDOM0gMTl5UGNpt6lW0A==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -3016,7 +3016,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@libsql/client': 0.5.0
+      '@libsql/client': 0.5.2
       '@opentelemetry/api': 1.7.0
       '@types/react': 18.2.56
       react: 18.2.0
@@ -4516,21 +4516,21 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /libsql@0.3.1:
-    resolution: {integrity: sha512-L8CfxSSAtdTW9xGLWbhSr7gVYH8YHrsEumvcsbehPY9G11QmRPPo6y+vBD8IkIB8Jr/07xEiLa6ytx76sCtWZQ==}
+  /libsql@0.3.2:
+    resolution: {integrity: sha512-lKJQG6VATgNVNLxxPjGkKkjKF3HnEVP5OpesCz+zaftLzZlIti8ZCRwGcwGwjr3kyV0K5U2rlw0vQpTMCew3FA==}
     cpu: [x64, arm64]
     os: [darwin, linux, win32]
     dependencies:
       '@neon-rs/load': 0.0.4
       detect-libc: 2.0.2
     optionalDependencies:
-      '@libsql/darwin-arm64': 0.3.1
-      '@libsql/darwin-x64': 0.3.1
-      '@libsql/linux-arm64-gnu': 0.3.1
-      '@libsql/linux-arm64-musl': 0.3.1
-      '@libsql/linux-x64-gnu': 0.3.1
-      '@libsql/linux-x64-musl': 0.3.1
-      '@libsql/win32-x64-msvc': 0.3.1
+      '@libsql/darwin-arm64': 0.3.2
+      '@libsql/darwin-x64': 0.3.2
+      '@libsql/linux-arm64-gnu': 0.3.2
+      '@libsql/linux-arm64-musl': 0.3.2
+      '@libsql/linux-x64-gnu': 0.3.2
+      '@libsql/linux-x64-musl': 0.3.2
+      '@libsql/win32-x64-msvc': 0.3.2
     dev: false
 
   /lilconfig@2.1.0:
