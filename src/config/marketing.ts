@@ -1,6 +1,6 @@
 import { GithubIcon, InstagramIcon, TwitterIcon } from "lucide-react";
 
-import { type FooterItem, type MarketingConfig } from "~/types";
+import type { BenefitItem, FooterItem, MarketingConfig } from "~/types";
 import { siteConfig } from "./site";
 
 export const marketingConfig: MarketingConfig = {
@@ -15,6 +15,33 @@ export const marketingConfig: MarketingConfig = {
     },
   ],
 };
+
+export const benefits: BenefitItem[] = [
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GitHub",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
 
 export const footerItems: FooterItem[] = [
   {
