@@ -1,20 +1,24 @@
 // Example model schema from the Drizzle docs
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
-import { index, serial, varchar } from "drizzle-orm/pg-core";
+import { boolean, index, json, varchar } from "drizzle-orm/pg-core";
 
 import { createdAt, pgTable, updatedAt } from "./_table";
 
 export const posts = pgTable(
   "posts",
   {
-    id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    id: varchar("id", { length: 32 }).primaryKey(), // prefix_ + nanoid(16)
+    title: varchar("title", { length: 32 }).notNull(),
+    content: json("content"),
 
+    authorId: varchar("authorId", { length: 64 }).notNull(),
+
+    published: boolean("published").default(false),
     createdAt,
     updatedAt,
   },
-  (example) => ({
-    nameIndex: index("name_idx").on(example.name),
+  (post) => ({
+    authorIdIdx: index("authorId_idx").on(post.authorId),
   }),
 );

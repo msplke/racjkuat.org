@@ -1,7 +1,6 @@
-import { GithubIcon, InstagramIcon, TwitterIcon } from "lucide-react";
-
+import { Icons } from "~/components";
+import { siteConfig } from "~/config/site";
 import type { BenefitItem, FooterItem, MarketingConfig } from "~/types";
-import { siteConfig } from "./site";
 
 export const marketingConfig: MarketingConfig = {
   mainNav: [
@@ -47,16 +46,16 @@ export const footerItems: FooterItem[] = [
   {
     title: "GitHub",
     href: siteConfig.links.github,
-    icon: GithubIcon,
+    icon: Icons.gitHub,
   },
   {
     title: "Instagram",
     href: siteConfig.links.instagram,
-    icon: InstagramIcon,
+    icon: Icons.instagram,
   },
   {
     title: "Twitter",
     href: siteConfig.links.twitter,
-    icon: TwitterIcon,
+    icon: Icons.twitter,
   },
 ];

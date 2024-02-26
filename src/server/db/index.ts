@@ -5,6 +5,7 @@ import postgres from "postgres";
 import { env } from "~/env";
 import * as post from "./schema/post";
 
+export * from "drizzle-orm";
 export const schema = { ...post };
 
 export const db = drizzle(postgres(env.DATABASE_URL), { schema });
