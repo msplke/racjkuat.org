@@ -3,13 +3,7 @@ import { authMiddleware } from "@clerk/nextjs/server";
 
 export default authMiddleware({
   signInUrl: "/login",
-  publicRoutes: [
-    "/",
-    "/about(.*)",
-    "/blog(.*)",
-    "/login(.*)",
-    "/sso-callback(.*)",
-  ],
+  publicRoutes: ["/", "/about(.*)", "/blog(.*)", "/login(.*)"],
 
   afterAuth(auth, req) {
     if (auth.isPublicRoute) {
