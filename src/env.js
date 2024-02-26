@@ -7,12 +7,11 @@ export const env = createEnv({
    */
   server: {
     CLERK_SECRET_KEY: z.string().optional(),
-    DATABASE_AUTH_TOKEN: z.string(),
     DATABASE_URL: z
       .string()
       .url()
       .refine(
-        (str) => !str.includes("YOUR_LIBSQL_URL_HERE"),
+        (str) => !str.includes("YOUR_POSTGRESQL_URL_HERE"),
         "You forgot to change the default URL",
       ),
     NODE_ENV: z
@@ -34,7 +33,6 @@ export const env = createEnv({
    */
   runtimeEnv: {
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-    DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN,
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
 

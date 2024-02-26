@@ -1,12 +1,14 @@
-import { createClient } from "@libsql/client";
-import { drizzle } from "drizzle-orm/libsql";
+import { drizzle } from "drizzle-orm/postgres-js";
+import { customAlphabet } from "nanoid";
+import postgres from "postgres";
 
 import { env } from "~/env";
-import * as schema from "./schema";
+import * as post from "./schema/post";
 
-const client = createClient({
-  url: env.DATABASE_URL,
-  authToken: env.DATABASE_AUTH_TOKEN,
-});
+export const schema = { ...post };
 
-export const db = drizzle(client, { schema });
+export const db = drizzle(postgres(env.DATABASE_URL), { schema });
+
+// Use custom alphabet without special chars for less chaotic, copy-able URLs
+// Will not collide for a long long time: https://zelark.github.io/nano-id-cc/
+export const genId = customAlphabet("0123456789abcdefghijklmnopqrstuvwxyz", 16);
