@@ -19,21 +19,24 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           </p>
         </div>
 
-        <div className="ml-auto text-sm text-primary">
-          {footerItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.disabled ? "#" : item.href}
-              target="_blank"
-              referrerPolicy="no-referrer"
-              className={buttonVariants({ variant: "ghost" })}
-            >
-              <item.icon className="h-5 w-5" />
-              <span className="sr-only">{item.title}</span>
-            </Link>
-          ))}
+        <div className="flex items-center">
+          <div className="ml-auto text-sm text-primary">
+            {footerItems.map((item, index) => (
+              <Link
+                key={index}
+                href={item.disabled ? "#" : item.href}
+                target="_blank"
+                referrerPolicy="no-referrer"
+                className={buttonVariants({ variant: "ghost" })}
+              >
+                <item.icon className="h-5 w-5" />
+                <span className="sr-only">{item.title}</span>
+              </Link>
+            ))}
+          </div>
+
+          <ModeToggle />
         </div>
-        <ModeToggle />
       </div>
     </footer>
   );
