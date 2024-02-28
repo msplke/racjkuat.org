@@ -20,10 +20,14 @@ export default function IndexPage() {
           </Link>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Welcome to the <br />
-            Rotaract Club of JKUAT.
+            Rotaract Club of JKUAT.<br/>What’s involved?<br/>
+Rotaract members decide how to organize and run their clubs, manage their own funds, and plan and carry out activities and service projects. Rotary club sponsors offer guidance and support and work with your club as partners in service.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            Create Hope in the World!
+            Create Hope in the World!Join the global movement of young leaders who are developing innovative solutions to the world’s most pressing challenges.
+Rotaract clubs bring together people ages 18 and older to exchange ideas with leaders in the community, develop leadership and professional skills, and have fun through service.
+
+In communities worldwide, Rotary and Rotaract members work side by side to take action through service. From big cities to rural villages, Rotaract is changing communities like yours.
           </p>
           <div className="space-x-4">
             <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
