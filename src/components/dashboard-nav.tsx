@@ -3,21 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { dashboardConfig } from "~/config/dashboard";
 import { cn } from "~/lib/utils";
-import { type SidebarNavItem } from "~/types";
 
-interface DashboardNavProps {
-  items: SidebarNavItem[];
-}
-
-export function DashboardNav({ items }: DashboardNavProps) {
+export function DashboardNav() {
   const path = usePathname();
-
-  if (!items?.length) return null;
 
   return (
     <nav className="grid items-start gap-2">
-      {items.map((item, index) => {
+      {dashboardConfig.sidebarNav.map((item, index) => {
         const Icon = item.icon;
 
         return (

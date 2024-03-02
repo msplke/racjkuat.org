@@ -12,9 +12,9 @@ export const metadata = {
 };
 
 export default async function SettingsPage() {
-  const { user } = auth();
+  const { userId } = auth();
 
-  if (!user) redirect("/login");
+  if (!userId) redirect("/login");
 
   return (
     <DashboardShell>

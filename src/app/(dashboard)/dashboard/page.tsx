@@ -13,19 +13,13 @@ export const metadata = {
 };
 
 export default async function DashboardPage() {
-  const { user } = auth();
+  const { userId } = auth();
 
-  if (!user) redirect("/login");
+  if (!userId) redirect("/login");
 
   const posts = await db.query.posts.findMany({
-    where: eq(schema.posts.authorId, user.id),
+    where: eq(schema.posts.authorId, userId),
     orderBy: (posts, { desc }) => [desc(posts.updatedAt)],
-    with: {
-      id: true,
-      title: true,
-      published: true,
-      createdAt: true,
-    },
   });
 
   return (
@@ -33,6 +27,7 @@ export default async function DashboardPage() {
       <DashboardHeader heading="Posts" text="Create and manage posts.">
         <PostCreateButton />
       </DashboardHeader>
+
       <div>
         {posts?.length ? (
           <div className="divide-y divide-border rounded-md border">
