@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { auth } from "@clerk/nextjs";
 
-import { MainNav, SiteFooter } from "~/components";
+import { Icons, MainNav, SiteFooter } from "~/components";
 import { buttonVariants } from "~/components/ui/button";
 import { marketingConfig } from "~/config/marketing";
 import { cn } from "~/lib/utils";
@@ -10,6 +11,8 @@ interface MarketingLayoutProps {
 }
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
+  const { userId } = auth();
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="container z-40 bg-background">
@@ -18,10 +21,17 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
 
           <nav>
             <Link
-              href="/login"
+              href={userId ? "/dashboard" : "/login"}
               className={cn(buttonVariants({ variant: "secondary" }), "px-4")}
             >
-              Login
+              {userId ? (
+                <span className="flex items-center">
+                  Dashboard
+                  <Icons.chevronRight className="ml-1 h-4 w-4" />
+                </span>
+              ) : (
+                <span>Login</span>
+              )}
             </Link>
           </nav>
         </div>

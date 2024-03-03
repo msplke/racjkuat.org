@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { auth } from "@clerk/nextjs";
 
 import { buttonVariants } from "~/components/ui/button";
 import { benefits } from "~/config/marketing";
@@ -7,6 +8,8 @@ import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 
 export default function IndexPage() {
+  const { userId } = auth();
+
   return (
     <main className="container">
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-28">
@@ -26,8 +29,11 @@ export default function IndexPage() {
             Create Hope in the World!
           </p>
           <div className="space-x-4">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
-              Login
+            <Link
+              href={userId ? "/dashboard" : "/login"}
+              className={cn(buttonVariants({ size: "lg" }), "px-4")}
+            >
+              {userId ? <span>Dashboard</span> : <span>Login</span>}
             </Link>
             <Link
               href="/about"
@@ -62,10 +68,10 @@ export default function IndexPage() {
 
               <div className="space-x-4">
                 <Link
-                  href="/login"
-                  className={cn(buttonVariants({ size: "lg" }))}
+                  href={userId ? "/dashboard" : "/login"}
+                  className={cn(buttonVariants({ size: "lg" }), "px-4")}
                 >
-                  Login
+                  {userId ? <span>Dashboard</span> : <span>Login</span>}
                 </Link>
                 <Link
                   href="/about"
