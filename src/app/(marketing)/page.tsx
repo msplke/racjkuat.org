@@ -63,7 +63,7 @@ export default function IndexPage() {
                 <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl">
                   What’s involved?
                 </h2>
-                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:leading-8 md:text-xl">
+                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:leading-8 md:text-lg">
                   Rotaract members decide how to organize and run their clubs,
                   manage their own funds, and plan and carry out activities and
                   service projects. Rotary club sponsors offer guidance and
