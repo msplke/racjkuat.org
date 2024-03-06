@@ -26,7 +26,9 @@ export default function IndexPage() {
             Rotaract Club of JKUAT.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            Create Hope in the World!
+            Create Hope in the World! Join the global movement of young leaders
+            who are developing innovative solutions to the world’s most pressing
+            challenges.
           </p>
           <div className="space-x-4">
             <Link
@@ -59,10 +61,13 @@ export default function IndexPage() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl">
-                  Welcome to the Rotaract Club of JKUAT.
+                  What’s involved?
                 </h2>
-                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:leading-8 md:text-xl">
-                  Create Hope in the World!
+                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:leading-8 md:text-lg">
+                  Rotaract members decide how to organize and run their clubs,
+                  manage their own funds, and plan and carry out activities and
+                  service projects. Rotary club sponsors offer guidance and
+                  support and work with your club as partners in service.
                 </p>
               </div>
 
@@ -96,9 +101,7 @@ export default function IndexPage() {
             Benefits
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project is an experiment to see how a modern app, with features
-            like auth, subscriptions, API routes, and static pages would work in
-            Next.js 13 app dir.
+            Here are some of the benefits of joining our club.
           </p>
         </div>
 
@@ -122,8 +125,8 @@ export default function IndexPage() {
 
         <div className="mx-auto text-center md:max-w-[58rem]">
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Taxonomy also includes a blog and a full-featured documentation site
-            built using Contentlayer and MDX.
+            To learn more about our club, please visit the about page or our
+            social media pages linked below.
           </p>
         </div>
       </section>
