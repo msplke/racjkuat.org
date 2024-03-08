@@ -63,6 +63,7 @@
    - Integration of a secure donation system for individuals or organizations interested in supporting the club financially.
    - Transparent reporting on the use of donations to build trust among contributors.
    - Options for one-time and recurring donations.
+   - Mpesa will be our main mean of payment but later we can also integrate Paypal
 
 6. User-Friendly Design:
 
