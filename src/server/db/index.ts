@@ -3,10 +3,10 @@ import { customAlphabet } from "nanoid";
 import postgres from "postgres";
 
 import { env } from "~/env";
-import * as post from "./schema/post";
+import * as dbSchema from "./schema";
 
 export * from "drizzle-orm";
-export const schema = { ...post };
+export const schema = { ...dbSchema };
 
 export const db = drizzle(postgres(env.DATABASE_URL), { schema });
 
