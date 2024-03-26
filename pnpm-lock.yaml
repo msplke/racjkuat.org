@@ -27,17 +27,17 @@ dependencies:
     specifier: ^5.28.8
     version: 5.28.8(react@18.2.0)
   '@trpc/client':
-    specifier: ^10.45.2
-    version: 10.45.2(@trpc/server@10.45.2)
+    specifier: next
+    version: 11.0.0-next.320(@trpc/server@11.0.0-next.320)
   '@trpc/next':
-    specifier: ^10.45.2
-    version: 10.45.2(@tanstack/react-query@5.28.8)(@trpc/client@10.45.2)(@trpc/react-query@10.45.2)(@trpc/server@10.45.2)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)
+    specifier: next
+    version: 11.0.0-next.320(@tanstack/react-query@5.28.8)(@trpc/client@11.0.0-next.320)(@trpc/react-query@11.0.0-next.320)(@trpc/server@11.0.0-next.320)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)
   '@trpc/react-query':
-    specifier: ^10.45.2
-    version: 10.45.2(@tanstack/react-query@5.28.8)(@trpc/client@10.45.2)(@trpc/server@10.45.2)(react-dom@18.2.0)(react@18.2.0)
+    specifier: next
+    version: 11.0.0-next.320(@tanstack/react-query@5.28.8)(@trpc/client@11.0.0-next.320)(@trpc/server@11.0.0-next.320)(react-dom@18.2.0)(react@18.2.0)
   '@trpc/server':
-    specifier: ^10.45.2
-    version: 10.45.2
+    specifier: next
+    version: 11.0.0-next.320
   '@vercel/analytics':
     specifier: ^1.2.2
     version: 1.2.2(next@14.1.4)(react@18.2.0)
@@ -133,6 +133,9 @@ devDependencies:
   eslint-config-next:
     specifier: ^14.1.4
     version: 14.1.4(eslint@8.57.0)(typescript@5.4.3)
+  eslint-plugin-drizzle:
+    specifier: ^0.2.3
+    version: 0.2.3(eslint@8.57.0)
   postcss:
     specifier: ^8.4.38
     version: 8.4.38
@@ -2286,52 +2289,57 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@trpc/client@10.45.2(@trpc/server@10.45.2):
-    resolution: {integrity: sha512-ykALM5kYWTLn1zYuUOZ2cPWlVfrXhc18HzBDyRhoPYN0jey4iQHEFSEowfnhg1RvYnrAVjNBgHNeSAXjrDbGwg==}
+  /@trpc/client@11.0.0-next.320(@trpc/server@11.0.0-next.320):
+    resolution: {integrity: sha512-6VuHBXOLpVYflC75ktgMDexq6RkCNkHmPUWxdpi85O+zEk3miCJMYdlFNRO40d78HC0pTmoyuiQzyAX8J4+m3w==}
     peerDependencies:
-      '@trpc/server': 10.45.2
+      '@trpc/server': 11.0.0-next.320+f3a237ccb
     dependencies:
-      '@trpc/server': 10.45.2
+      '@trpc/server': 11.0.0-next.320
     dev: false
 
-  /@trpc/next@10.45.2(@tanstack/react-query@5.28.8)(@trpc/client@10.45.2)(@trpc/react-query@10.45.2)(@trpc/server@10.45.2)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-RSORmfC+/nXdmRY1pQ0AalsVgSzwNAFbZLYHiTvPM5QQ8wmMEHilseCYMXpu0se/TbPt9zVR6Ka2d7O6zxKkXg==}
+  /@trpc/next@11.0.0-next.320(@tanstack/react-query@5.28.8)(@trpc/client@11.0.0-next.320)(@trpc/react-query@11.0.0-next.320)(@trpc/server@11.0.0-next.320)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xQWaVbfTvW6j3cWNC7PfO6pRkaFkLbrEoVUM2f3qt95FGtMFgZe5pFc/Bd+AHUiwgaozcxhvqJmzbhYkmbMXMA==}
     peerDependencies:
-      '@tanstack/react-query': ^4.18.0
-      '@trpc/client': 10.45.2
-      '@trpc/react-query': 10.45.2
-      '@trpc/server': 10.45.2
+      '@tanstack/react-query': ^5.25.0
+      '@trpc/client': 11.0.0-next.320+f3a237ccb
+      '@trpc/react-query': 11.0.0-next.320+f3a237ccb
+      '@trpc/server': 11.0.0-next.320+f3a237ccb
       next: '*'
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
+    peerDependenciesMeta:
+      '@tanstack/react-query':
+        optional: true
+      '@trpc/react-query':
+        optional: true
     dependencies:
       '@tanstack/react-query': 5.28.8(react@18.2.0)
-      '@trpc/client': 10.45.2(@trpc/server@10.45.2)
-      '@trpc/react-query': 10.45.2(@tanstack/react-query@5.28.8)(@trpc/client@10.45.2)(@trpc/server@10.45.2)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/server': 10.45.2
+      '@trpc/client': 11.0.0-next.320(@trpc/server@11.0.0-next.320)
+      '@trpc/react-query': 11.0.0-next.320(@tanstack/react-query@5.28.8)(@trpc/client@11.0.0-next.320)(@trpc/server@11.0.0-next.320)(react-dom@18.2.0)(react@18.2.0)
+      '@trpc/server': 11.0.0-next.320
       next: 14.1.4(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@trpc/react-query@10.45.2(@tanstack/react-query@5.28.8)(@trpc/client@10.45.2)(@trpc/server@10.45.2)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-BAqb9bGZIscroradlNx+Cc9522R+idY3BOSf5z0jHUtkxdMbjeGKxSSMxxu7JzoLqSIEC+LVzL3VvF8sdDWaZQ==}
+  /@trpc/react-query@11.0.0-next.320(@tanstack/react-query@5.28.8)(@trpc/client@11.0.0-next.320)(@trpc/server@11.0.0-next.320)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-r7yECFJm7U+2Wcm/KgzNUEB0BSajJnjEcZZctXlbvvVUTVrYMyEjCh5cjJDoZfRuvrwLmJbhFSg+ytzXXJkTLw==}
     peerDependencies:
-      '@tanstack/react-query': ^4.18.0
-      '@trpc/client': 10.45.2
-      '@trpc/server': 10.45.2
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
+      '@tanstack/react-query': ^5.25.0
+      '@trpc/client': 11.0.0-next.320+f3a237ccb
+      '@trpc/server': 11.0.0-next.320+f3a237ccb
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
     dependencies:
       '@tanstack/react-query': 5.28.8(react@18.2.0)
-      '@trpc/client': 10.45.2(@trpc/server@10.45.2)
-      '@trpc/server': 10.45.2
+      '@trpc/client': 11.0.0-next.320(@trpc/server@11.0.0-next.320)
+      '@trpc/server': 11.0.0-next.320
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@trpc/server@10.45.2:
-    resolution: {integrity: sha512-wOrSThNNE4HUnuhJG6PfDRp4L2009KDVxsd+2VYH8ro6o/7/jwYZ8Uu5j+VaW+mOmc8EHerHzGcdbGNQSAUPgg==}
+  /@trpc/server@11.0.0-next.320:
+    resolution: {integrity: sha512-cIcJBNt78OnDHAUgGEfUJZNteXfPbzTt6XQ6kTFZkOtlbxwCIfTaVYac+WmQBV4yIQZJTk0BeaDgJkXGcVDp0w==}
     dev: false
 
   /@types/acorn@4.0.6:
@@ -3855,6 +3863,14 @@ packages:
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /eslint-plugin-drizzle@0.2.3(eslint@8.57.0):
+    resolution: {integrity: sha512-BO+ymHo33IUNoJlC0rbd7HP9EwwpW4VIp49R/tWQF/d2E1K2kgTf0tCXT0v9MSiBr6gGR1LtPwMLapTKEWSg9A==}
+    peerDependencies:
+      eslint: '>=8.0.0'
+    dependencies:
+      eslint: 8.57.0
     dev: true
 
   /eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.4.0)(eslint@8.57.0):
