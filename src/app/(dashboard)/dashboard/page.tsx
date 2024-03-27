@@ -42,7 +42,7 @@ export default async function DashboardPage() {
             <EmptyPlaceholder.Description>
               You don&apos;t have any posts yet. Start creating content.
             </EmptyPlaceholder.Description>
-            <PostCreateButton variant="secondary" />
+            <PostCreateButton variant="outline" />
           </EmptyPlaceholder>
         )}
       </div>

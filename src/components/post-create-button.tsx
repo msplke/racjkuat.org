@@ -3,22 +3,16 @@
 import { useRouter } from "next/navigation";
 
 import { Icons } from "~/components/icons";
-import {
-  Button,
-  buttonVariants,
-  type ButtonProps,
-} from "~/components/ui/button";
+import { buttonVariants, type ButtonProps } from "~/components/ui/button";
 import { toast } from "~/components/ui/use-toast";
 import { cn } from "~/lib/utils";
 import { api } from "~/trpc/react";
-
-type PostCreateButtonProps = ButtonProps;
 
 export function PostCreateButton({
   className,
   variant,
   ...props
-}: PostCreateButtonProps) {
+}: ButtonProps) {
   const router = useRouter();
 
   const { mutateAsync: createPost, isPending: creatingPost } =
@@ -50,7 +44,7 @@ export function PostCreateButton({
   };
 
   return (
-    <Button
+    <button
       onClick={onClick}
       className={cn(
         buttonVariants({ variant }),
@@ -66,6 +60,6 @@ export function PostCreateButton({
         <Icons.add className="mr-2 h-4 w-4" />
       )}
       New post
-    </Button>
+    </button>
   );
 }
