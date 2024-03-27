@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { Icons } from "~/components/icons";
-import { buttonVariants, type ButtonProps } from "~/components/ui/button";
+import {
+  Button,
+  buttonVariants,
+  type ButtonProps,
+} from "~/components/ui/button";
 import { toast } from "~/components/ui/use-toast";
 import { cn } from "~/lib/utils";
+import { api } from "~/trpc/react";
 
 type PostCreateButtonProps = ButtonProps;
 
@@ -16,68 +20,52 @@ export function PostCreateButton({
   ...props
 }: PostCreateButtonProps) {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
 
-  async function onClick() {
-    setIsLoading(true);
-
-    const response = await fetch("/api/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+  const { mutateAsync: createPost, isPending: creatingPost } =
+    api.post.create.useMutation({
+      onSuccess() {
+        toast({
+          title: "Post created",
+          description: "Your post has been created successfully.",
+        });
       },
-      body: JSON.stringify({
-        title: "Untitled Post",
-      }),
-    });
 
-    setIsLoading(false);
-
-    if (!response?.ok) {
-      if (response.status === 402) {
-        return toast({
-          title: "Limit of 3 posts reached.",
-          description: "Please upgrade to the PRO plan.",
+      onError() {
+        toast({
+          title: "Something went wrong",
+          description: "Your post was not created. Please try again.",
           variant: "destructive",
         });
-      }
+      },
+    });
 
-      return toast({
-        title: "Something went wrong.",
-        description: "Your post was not created. Please try again.",
-        variant: "destructive",
-      });
-    }
-
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const post = await response.json();
+  const onClick = async () => {
+    const post = await createPost({ title: "Untitled Post" });
 
     // This forces a cache invalidation.
     router.refresh();
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    if (!post) return;
     router.push(`/editor/${post.id}`);
-  }
+  };
 
   return (
-    <button
+    <Button
       onClick={onClick}
       className={cn(
         buttonVariants({ variant }),
-        {
-          "cursor-not-allowed opacity-60": isLoading,
-        },
+        { "cursor-not-allowed opacity-60": creatingPost },
         className,
       )}
-      disabled={isLoading}
+      disabled={creatingPost}
       {...props}
     >
-      {isLoading ? (
+      {creatingPost ? (
         <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
       ) : (
         <Icons.add className="mr-2 h-4 w-4" />
       )}
       New post
-    </button>
+    </Button>
   );
 }
