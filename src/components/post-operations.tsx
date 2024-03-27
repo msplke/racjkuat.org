@@ -24,22 +24,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { toast } from "~/components/ui/use-toast";
 import { type schema } from "~/server/db";
-
-async function deletePost(postId: string) {
-  const response = await fetch(`/api/posts/${postId}`, {
-    method: "DELETE",
-  });
-
-  if (!response?.ok) {
-    toast({
-      title: "Something went wrong.",
-      description: "Your post was not deleted. Please try again.",
-      variant: "destructive",
-    });
-  }
-
-  return true;
-}
+import { api } from "~/trpc/react";
 
 type Post = typeof schema.posts.$inferSelect;
 interface PostOperationsProps {
@@ -48,9 +33,27 @@ interface PostOperationsProps {
 
 export function PostOperations({ post }: PostOperationsProps) {
   const [showDeleteAlert, setShowDeleteAlert] = useState(false);
-  const [isDeleteLoading, setIsDeleteLoading] = useState(false);
 
   const router = useRouter();
+
+  const { mutateAsync: deletePost, isPending: deletingPost } =
+    // eslint-disable-next-line drizzle/enforce-delete-with-where
+    api.post.delete.useMutation({
+      onSuccess() {
+        toast({
+          title: "Post deleted",
+          description: "Your post has been deleted successfully.",
+        });
+      },
+
+      onError() {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again later.",
+          variant: "destructive",
+        });
+      },
+    });
 
   return (
     <>
@@ -85,24 +88,23 @@ export function PostOperations({ post }: PostOperationsProps) {
               This action cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
+
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction
               onClick={async (event) => {
                 event.preventDefault();
-                setIsDeleteLoading(true);
 
-                const deleted = await deletePost(post.id);
+                const deleted = await deletePost({ postId: post.id });
 
                 if (deleted) {
-                  setIsDeleteLoading(false);
                   setShowDeleteAlert(false);
                   router.refresh();
                 }
               }}
               className="bg-red-600 focus:ring-red-600"
             >
-              {isDeleteLoading ? (
+              {deletingPost ? (
                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
               ) : (
                 <Icons.trash className="mr-2 h-4 w-4" />
