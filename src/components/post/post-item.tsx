@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { PostOperations } from "~/components/post-operations";
+import { PostOperations } from "~/components/post/post-operations";
 import { Skeleton } from "~/components/ui/skeleton";
 import { formatDate } from "~/lib/utils";
 import { type schema } from "~/server/db";

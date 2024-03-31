@@ -3,8 +3,8 @@ import { auth } from "@clerk/nextjs";
 
 import { EmptyPlaceholder } from "~/components/empty-placeholder";
 import { DashboardHeader } from "~/components/header";
-import { PostCreateButton } from "~/components/post-create-button";
-import { PostItem } from "~/components/post-item";
+import { PostCreateButton } from "~/components/post/post-create-button";
+import { PostItem } from "~/components/post/post-item";
 import { DashboardShell } from "~/components/shell";
 import { db, eq, schema } from "~/server/db";
 
