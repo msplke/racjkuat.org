@@ -9,6 +9,7 @@ import {
   createPostSchema,
   deletePostSchema,
   getAllPostsByUserSchema,
+  getAllPostsSchema,
   getPostByIdSchema,
   updatePostSchema,
 } from "~/server/api/validators/post";
@@ -52,6 +53,18 @@ export const postRouter = createTRPCRouter({
       await ctx.db.delete(schema.posts).where(eq(schema.posts.id, postId));
 
       return postId;
+    }),
+
+  getAll: publicProcedure
+    .input(getAllPostsSchema)
+    .mutation(async ({ ctx, input }) => {
+      const { limit, page } = input;
+
+      return ctx.db.query.posts.findMany({
+        limit: parseInt(limit),
+        offset: (parseInt(page) - 1) * parseInt(limit), // Skip should start from 0 for page 1
+        orderBy: (posts, { desc }) => [desc(posts.createdAt)],
+      });
     }),
 
   getAllByUser: publicProcedure

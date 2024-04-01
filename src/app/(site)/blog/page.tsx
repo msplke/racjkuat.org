@@ -47,6 +47,7 @@ export default function BlogPage() {
                   priority={index <= 1}
                 />
               )}
+
               <h2 className="text-2xl font-extrabold">{post.title}</h2>
               {post.description && (
                 <p className="text-muted-foreground">{post.description}</p>
@@ -56,6 +57,7 @@ export default function BlogPage() {
                   {formatDate(post.date)}
                 </p>
               )}
+
               <Link href={post.slug} className="absolute inset-0">
                 <span className="sr-only">View Article</span>
               </Link>

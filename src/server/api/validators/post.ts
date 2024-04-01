@@ -15,6 +15,11 @@ export const deletePostSchema = z.object({
     .max(32, "Post ID cannot exceed 32 characters"),
 });
 
+export const getAllPostsSchema = z.object({
+  limit: z.string(),
+  page: z.string(),
+});
+
 export const getAllPostsByUserSchema = z.object({
   userId: z
     .string()

@@ -95,6 +95,7 @@ export default function PostPage({ params }: PostPageProps) {
         <Icons.chevronLeft className="mr-2 h-4 w-4" />
         See all posts
       </Link>
+
       <div>
         {post.date && (
           <time
@@ -104,9 +105,11 @@ export default function PostPage({ params }: PostPageProps) {
             Published on {formatDate(post.date)}
           </time>
         )}
+
         <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
           {post.title}
         </h1>
+
         {authors?.length ? (
           <div className="mt-4 flex space-x-4">
             {authors.map((author) =>
@@ -135,6 +138,7 @@ export default function PostPage({ params }: PostPageProps) {
           </div>
         ) : null}
       </div>
+
       {post.image && (
         <Image
           src={post.image}
@@ -145,8 +149,11 @@ export default function PostPage({ params }: PostPageProps) {
           priority
         />
       )}
+
       <Mdx code={post.body.code} />
+
       <hr className="mt-12" />
+
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
           <Icons.chevronLeft className="mr-2 h-4 w-4" />

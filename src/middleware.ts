@@ -8,6 +8,7 @@ export default authMiddleware({
     "/about(.*)",
     "/api/uploadthing",
     "/blog(.*)",
+    "/feed(.*)",
     "/login(.*)",
   ],
 
