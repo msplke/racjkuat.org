@@ -10,6 +10,7 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  images: { domains: ["utfs.io"] },
   reactStrictMode: true,
 
   /** We already do linting and typechecking as separate tasks in CI */
