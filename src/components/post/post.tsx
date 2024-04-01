@@ -12,7 +12,7 @@ export function IndividualPost({ post }: { post: Post }) {
   const postRef = useRef<HTMLParagraphElement>(null);
 
   return (
-    <Card className="group relative flex flex-col space-y-2 rounded-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-800">
+    <Card className="group relative flex flex-col space-y-2 rounded-lg p-6 hover:bg-slate-100 dark:hover:bg-slate-800">
       <h2 className="font-heading text-2xl font-bold">{post.title}</h2>
 
       <p className="text-sm text-muted-foreground">
