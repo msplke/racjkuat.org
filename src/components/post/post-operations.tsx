@@ -23,10 +23,9 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import { toast } from "~/components/ui/use-toast";
-import { type schema } from "~/server/db";
 import { api } from "~/trpc/react";
+import { type Post } from "~/types/db";
 
-type Post = typeof schema.posts.$inferSelect;
 interface PostOperationsProps {
   post: Pick<Post, "id" | "title">;
 }

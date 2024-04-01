@@ -16,10 +16,9 @@ import { buttonVariants } from "~/components/ui/button";
 import { toast } from "~/components/ui/use-toast";
 import { editorTools } from "~/lib/editor-tools";
 import { cn } from "~/lib/utils";
-import { type schema } from "~/server/db";
 import { api } from "~/trpc/react";
+import { type Post } from "~/types/db";
 
-type Post = typeof schema.posts.$inferSelect;
 interface EditorProps {
   post: Pick<Post, "id" | "title" | "content" | "published">;
 }

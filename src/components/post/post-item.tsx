@@ -3,9 +3,8 @@ import Link from "next/link";
 import { PostOperations } from "~/components/post/post-operations";
 import { Skeleton } from "~/components/ui/skeleton";
 import { formatDate } from "~/lib/utils";
-import { type schema } from "~/server/db";
+import { type Post } from "~/types/db";
 
-type Post = typeof schema.posts.$inferSelect;
 interface PostItemProps {
   post: Pick<Post, "id" | "title" | "published" | "createdAt">;
 }
