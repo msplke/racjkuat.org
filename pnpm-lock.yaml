@@ -96,8 +96,8 @@ dependencies:
     specifier: ^3.6.0
     version: 3.6.0
   drizzle-orm:
-    specifier: ^0.30.6
-    version: 0.30.6(@opentelemetry/api@1.7.0)(@types/react@18.2.74)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0)
+    specifier: ^0.30.7
+    version: 0.30.7(@opentelemetry/api@1.7.0)(@types/react@18.2.74)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0)
   editorjs-react-renderer:
     specifier: ^3.5.1
     version: 3.5.1
@@ -3651,8 +3651,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.6(@opentelemetry/api@1.7.0)(@types/react@18.2.74)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0):
-    resolution: {integrity: sha512-8RgNUmY7J03GRuRgBV5SaJNbYgLVPjdSWNS/bRkIMIHt2TFCA439lJsNpqYX8asyKMqkw8ceBiamUnCIXZIt9w==}
+  /drizzle-orm@0.30.7(@opentelemetry/api@1.7.0)(@types/react@18.2.74)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0):
+    resolution: {integrity: sha512-9qefSZQlu2fO2qv24piHyWFWcxcOY15//0v4j8qomMqaxzipNoG+fUBrQ7Ftk7PY7APRbRdn/nkEXWxiI4a8mw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -3666,7 +3666,7 @@ packages:
       '@types/pg': '*'
       '@types/react': '>=18'
       '@types/sql.js': '*'
-      '@vercel/postgres': '*'
+      '@vercel/postgres': '>=0.8.0'
       '@xata.io/client': '*'
       better-sqlite3: '>=7'
       bun-types: '*'
