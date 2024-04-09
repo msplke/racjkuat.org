@@ -38,7 +38,7 @@
     "@trpc/next": "next",
     "@trpc/react-query": "next",
     "@trpc/server": "next",
-    "@uploadthing/react": "^6.4.1",
+    "@uploadthing/react": "^6.4.2",
     "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
