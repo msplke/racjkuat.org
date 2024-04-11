@@ -45,7 +45,7 @@
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.6.0",
-    "drizzle-orm": "^0.30.7",
+    "drizzle-orm": "^0.30.8",
     "editorjs-react-renderer": "^3.5.1",
     "lucide-react": "^0.367.0",
     "nanoid": "^5.0.7",
