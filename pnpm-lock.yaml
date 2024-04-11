@@ -42,8 +42,8 @@ dependencies:
     specifier: ^3.3.4
     version: 3.3.4(react-hook-form@7.51.2)
   '@mantine/hooks':
-    specifier: ^7.7.1
-    version: 7.7.1(react@18.2.0)
+    specifier: ^7.7.2
+    version: 7.7.2(react@18.2.0)
   '@radix-ui/react-alert-dialog':
     specifier: ^1.0.5
     version: 1.0.5(@types/react-dom@18.2.24)(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
@@ -1350,8 +1350,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@mantine/hooks@7.7.1(react@18.2.0):
-    resolution: {integrity: sha512-3YH2FzKMlg840tb04PBDcDXyBCi9puFOxEBVgc6Y/pN6KFqfOoAnQE/YvgOtwSNXZlbTWyDlQoYj+3je7pA7og==}
+  /@mantine/hooks@7.7.2(react@18.2.0):
+    resolution: {integrity: sha512-fupbyZvH/hK7YPVlrRnx3uV5eOaMzFFF2Ll3RKMTRQnMhk4uvddzt9uUgGLIIsnZKfhPUZSIr54LZkHQTbPXhg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
