@@ -27,7 +27,7 @@
     "@editorjs/quote": "^2.6.0",
     "@editorjs/table": "^2.3.0",
     "@hookform/resolvers": "^3.3.4",
-    "@mantine/hooks": "^7.7.2",
+    "@mantine/hooks": "^7.8.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",
