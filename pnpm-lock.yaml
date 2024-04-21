@@ -96,8 +96,8 @@ dependencies:
     specifier: ^3.6.0
     version: 3.6.0
   drizzle-orm:
-    specifier: ^0.30.8
-    version: 0.30.8(@opentelemetry/api@1.7.0)(@types/react@18.2.79)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0)
+    specifier: ^0.30.9
+    version: 0.30.9(@opentelemetry/api@1.7.0)(@types/react@18.2.79)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0)
   editorjs-react-renderer:
     specifier: ^3.5.1
     version: 3.5.1
@@ -3675,8 +3675,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.8(@opentelemetry/api@1.7.0)(@types/react@18.2.79)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0):
-    resolution: {integrity: sha512-9pBJA0IjnpPpzZ6s9jlS1CQAbKoBmbn2GJesPhXaVblAA/joOJ4AWWevYcqvLGj9SvThBAl7WscN8Zwgg5mnTw==}
+  /drizzle-orm@0.30.9(@opentelemetry/api@1.7.0)(@types/react@18.2.79)(pg@8.11.5)(postgres@3.4.4)(react@18.2.0):
+    resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
