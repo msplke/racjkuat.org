@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { useAuth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
 import { Editor } from "~/components/editor";
 import { db, eq, schema } from "~/server/db";
@@ -9,7 +9,7 @@ export default async function EditorPage({
 }: {
   params: { postId: string };
 }) {
-  const { userId } = useAuth();
+  const { userId } = auth();
 
   if (!userId) redirect("/login");
 

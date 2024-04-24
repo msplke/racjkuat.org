@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { useAuth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
 import { DashboardHeader } from "~/components/header";
 import { DashboardShell } from "~/components/shell";
@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default async function SettingsPage() {
-  const { userId } = useAuth();
+  const { userId } = auth();
 
   if (!userId) redirect("/login");
 
