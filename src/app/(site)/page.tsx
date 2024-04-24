@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 
 import { buttonVariants } from "~/components/ui/button";
 import { benefits } from "~/config/marketing";
@@ -8,7 +8,7 @@ import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 
 export default function IndexPage() {
-  const { userId } = auth();
+  const { userId } = useAuth();
 
   return (
     <main className="container">

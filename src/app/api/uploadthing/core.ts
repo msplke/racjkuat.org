@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 
@@ -11,7 +11,7 @@ export const ourFileRouter = {
     // Set permissions and file types for this FileRoute
     .middleware(async () => {
       // This code runs on your server before upload
-      const { userId } = auth();
+      const { userId } = useAuth();
 
       // If you throw, the user will not be able to upload
       if (!userId) throw new UploadThingError("Unauthorized");

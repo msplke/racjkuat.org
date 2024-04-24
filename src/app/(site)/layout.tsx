@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { auth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 
 import { Icons, MainNav, SiteFooter } from "~/components";
 import { buttonVariants } from "~/components/ui/button";
@@ -11,7 +11,7 @@ interface MarketingLayoutProps {
 }
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
-  const { userId } = auth();
+  const { userId } = useAuth();
 
   return (
     <div className="flex min-h-screen flex-col">

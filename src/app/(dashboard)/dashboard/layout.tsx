@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { auth, UserButton } from "@clerk/nextjs";
+import { useAuth, UserButton } from "@clerk/nextjs";
 
 import { DashboardNav } from "~/components/dashboard-nav";
 import { MainNav } from "~/components/main-nav";
@@ -13,7 +13,7 @@ interface DashboardLayoutProps {
 export default async function DashboardLayout({
   children,
 }: DashboardLayoutProps) {
-  const { userId } = auth();
+  const { userId } = useAuth();
 
   if (!userId) redirect("/login");
 
