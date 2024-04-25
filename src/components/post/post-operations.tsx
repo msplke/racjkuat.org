@@ -36,7 +36,6 @@ export function PostOperations({ post }: PostOperationsProps) {
   const router = useRouter();
 
   const { mutateAsync: deletePost, isPending: deletingPost } =
-    // eslint-disable-next-line drizzle/enforce-delete-with-where
     api.post.delete.useMutation({
       onSuccess() {
         toast({
