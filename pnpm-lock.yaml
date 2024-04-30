@@ -75,8 +75,8 @@ importers:
         specifier: next
         version: 11.0.0-rc.359
       '@uploadthing/react':
-        specifier: ^6.5.0
-        version: 6.5.0(@uploadthing/mime-types@0.2.8)(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(uploadthing@6.10.0(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3))
+        specifier: ^6.5.1
+        version: 6.5.1(@uploadthing/mime-types@0.2.8)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(uploadthing@6.10.0(fast-check@3.18.0)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3))
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -145,7 +145,7 @@ importers:
         version: 1.0.7(tailwindcss@3.4.3)
       uploadthing:
         specifier: ^6.10.0
-        version: 6.10.0(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3)
+        version: 6.10.0(fast-check@3.18.0)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3)
       zod:
         specifier: ^3.23.5
         version: 3.23.5
@@ -467,6 +467,12 @@ packages:
 
   '@effect-ts/system@0.57.5':
     resolution: {integrity: sha512-/crHGujo0xnuHIYNc1VgP0HGJGFSoSqq88JFXe6FmFyXPpWt8Xu39LyLg7rchsxfXFeEdA9CrIZvLV5eswXV5g==}
+
+  '@effect/schema@0.66.12':
+    resolution: {integrity: sha512-14X3D2FxTFDtll41MWw5OkLQCWqcs6pLYhs38oRK1o7rQ9gM2fdL4sw/gJu4dayAqv122GMgoIEOrzO5PyBuYA==}
+    peerDependencies:
+      effect: ^3.1.0
+      fast-check: ^3.13.2
 
   '@effect/schema@0.66.7':
     resolution: {integrity: sha512-bfxicQHhnZjlEe3W0a1e4B6OHWTTewigxbaSpzqIlwFrJ5pFh6MleBQaRt7X2YkTUbnkTYuNdY976W4tFJbIYg==}
@@ -1665,12 +1671,12 @@ packages:
   '@uploadthing/mime-types@0.2.8':
     resolution: {integrity: sha512-x+OhjdgC+FXzIScuVDzWxUpPKRjq/WiXNh6bUz1pNAHsb7ecKhxHUfhdWg8+YkO32kDs8TCuMN1bVWTyJYDMQA==}
 
-  '@uploadthing/react@6.5.0':
-    resolution: {integrity: sha512-Mapjyl897k93b7SRi5A+Ez4hOpBrgu0vgRFbM2Ni/2GIul1jdJVebcOJ0LDB9TAZmQ4G4sMgL7h1QlfDUBSvlg==}
+  '@uploadthing/react@6.5.1':
+    resolution: {integrity: sha512-6ifqMO15RtryoL83oMJdglbTm2hsAcHKxrGUiVb/uecXIsjub8+BdanG/0IyKaaLmnZCa4cvFwE9MMkUnps3/A==}
     peerDependencies:
       next: '*'
       react: ^17.0.2 || ^18.0.0
-      uploadthing: 6.10.0
+      uploadthing: 6.10.1
     peerDependenciesMeta:
       next:
         optional: true
@@ -1679,6 +1685,14 @@ packages:
     resolution: {integrity: sha512-+5xBa3gdCoCI2R2HkIOAu0DRiZqEt3MtOHefNsuVlYjpEngeg04AHlNaTvAIFuBz6Wz43SFOiqpeQcpqGBUc5w==}
     peerDependencies:
       '@uploadthing/mime-types': 0.2.8
+    peerDependenciesMeta:
+      '@uploadthing/mime-types':
+        optional: true
+
+  '@uploadthing/shared@6.7.1':
+    resolution: {integrity: sha512-4Imk46n+rwFaobfDuDSclYcH/OcpJA048Ww0il6nqT7EoXQ7Pa9NJfGkoNkS8+K8rT71IVljdaiaLEapgRxj0Q==}
+    peerDependencies:
+      '@uploadthing/mime-types': 0.2.9
     peerDependenciesMeta:
       '@uploadthing/mime-types':
         optional: true
@@ -2193,6 +2207,9 @@ packages:
   effect@3.0.4:
     resolution: {integrity: sha512-KxkTPwNP2A2wUQ5CVLcp0gCpBSajHIL9XQwqpruKNdkMCvCVpLg8b3dx71ADwlzeB+LfUFe+cj4MgvrYQutXVQ==}
 
+  effect@3.1.0:
+    resolution: {integrity: sha512-A0kUH8qeH0jS0X4ViJXf/O5qfMQBrJRsTD1xHed4jpFF5ChUP96LmseaV9LQkFbVDo791REFWTOlMPGCyM/0Ng==}
+
   electron-to-chromium@1.4.689:
     resolution: {integrity: sha512-GatzRKnGPS1go29ep25reM94xxd1Wj8ritU0yRhCJ/tr1Bg8gKnm6R9O/yPOhGQBoLMZ9ezfrpghNaTw97C/PQ==}
 
@@ -2456,8 +2473,8 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
-  fast-check@3.17.2:
-    resolution: {integrity: sha512-+3DPTxtxABLgmmVpYxrash3DHoq0cMa1jjLYNp3qqokKKhqVEaS4lbnaDKqWU5Dd6C2pEudPPBAEEQ9nUou9OQ==}
+  fast-check@3.18.0:
+    resolution: {integrity: sha512-/951xaT0kA40w0GXRsZXEwSTE7LugjZtSA/8vPgFkiPQ8wNp8tRvqWuNDHBgLxJYXtsK11e/7Q4ObkKW5BdTFQ==}
     engines: {node: '>=8.0.0'}
 
   fast-deep-equal@3.1.3:
@@ -4725,10 +4742,15 @@ snapshots:
 
   '@effect-ts/system@0.57.5': {}
 
-  '@effect/schema@0.66.7(effect@3.0.4)(fast-check@3.17.2)':
+  '@effect/schema@0.66.12(effect@3.1.0)(fast-check@3.18.0)':
+    dependencies:
+      effect: 3.1.0
+      fast-check: 3.18.0
+
+  '@effect/schema@0.66.7(effect@3.0.4)(fast-check@3.18.0)':
     dependencies:
       effect: 3.0.4
-      fast-check: 3.17.2
+      fast-check: 3.18.0
 
   '@esbuild-kit/core-utils@3.3.2':
     dependencies:
@@ -5844,32 +5866,40 @@ snapshots:
 
   '@uploadthing/mime-types@0.2.8': {}
 
-  '@uploadthing/react@6.5.0(@uploadthing/mime-types@0.2.8)(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(uploadthing@6.10.0(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3))':
+  '@uploadthing/react@6.5.1(@uploadthing/mime-types@0.2.8)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(uploadthing@6.10.0(fast-check@3.18.0)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3))':
     dependencies:
       '@uploadthing/dropzone': 0.4.0(react@18.3.1)
-      '@uploadthing/shared': 6.7.0(@uploadthing/mime-types@0.2.8)(fast-check@3.17.2)
+      '@uploadthing/shared': 6.7.1(@uploadthing/mime-types@0.2.8)
       file-selector: 0.6.0
       react: 18.3.1
       tailwind-merge: 2.3.0
-      uploadthing: 6.10.0(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3)
+      uploadthing: 6.10.0(fast-check@3.18.0)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3)
     optionalDependencies:
       next: 14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@uploadthing/mime-types'
-      - fast-check
       - solid-js
       - svelte
       - vue
 
-  '@uploadthing/shared@6.7.0(@uploadthing/mime-types@0.2.8)(fast-check@3.17.2)':
+  '@uploadthing/shared@6.7.0(@uploadthing/mime-types@0.2.8)(fast-check@3.18.0)':
     dependencies:
-      '@effect/schema': 0.66.7(effect@3.0.4)(fast-check@3.17.2)
+      '@effect/schema': 0.66.7(effect@3.0.4)(fast-check@3.18.0)
       effect: 3.0.4
       std-env: 3.7.0
     optionalDependencies:
       '@uploadthing/mime-types': 0.2.8
     transitivePeerDependencies:
       - fast-check
+
+  '@uploadthing/shared@6.7.1(@uploadthing/mime-types@0.2.8)':
+    dependencies:
+      '@effect/schema': 0.66.12(effect@3.1.0)(fast-check@3.18.0)
+      effect: 3.1.0
+      fast-check: 3.18.0
+      std-env: 3.7.0
+    optionalDependencies:
+      '@uploadthing/mime-types': 0.2.8
 
   '@vercel/analytics@1.2.2(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -6329,6 +6359,8 @@ snapshots:
       react: 18.3.1
 
   effect@3.0.4: {}
+
+  effect@3.1.0: {}
 
   electron-to-chromium@1.4.689: {}
 
@@ -6857,7 +6889,7 @@ snapshots:
 
   extend@3.0.2: {}
 
-  fast-check@3.17.2:
+  fast-check@3.18.0:
     dependencies:
       pure-rand: 6.1.0
 
@@ -8931,11 +8963,11 @@ snapshots:
       escalade: 3.1.1
       picocolors: 1.0.0
 
-  uploadthing@6.10.0(fast-check@3.17.2)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3):
+  uploadthing@6.10.0(fast-check@3.18.0)(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3):
     dependencies:
-      '@effect/schema': 0.66.7(effect@3.0.4)(fast-check@3.17.2)
+      '@effect/schema': 0.66.7(effect@3.0.4)(fast-check@3.18.0)
       '@uploadthing/mime-types': 0.2.8
-      '@uploadthing/shared': 6.7.0(@uploadthing/mime-types@0.2.8)(fast-check@3.17.2)
+      '@uploadthing/shared': 6.7.0(@uploadthing/mime-types@0.2.8)(fast-check@3.18.0)
       consola: 3.2.3
       effect: 3.0.4
       std-env: 3.7.0
