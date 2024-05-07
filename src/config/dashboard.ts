@@ -11,10 +11,6 @@ export const dashboardConfig: DashboardConfig = {
       title: "Blog",
       href: "/blog",
     },
-    {
-      title: "Feed",
-      href: "/feed",
-    },
   ],
   sidebarNav: [
     {

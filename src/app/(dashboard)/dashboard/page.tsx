@@ -3,8 +3,6 @@ import { auth } from "@clerk/nextjs/server";
 
 import { EmptyPlaceholder } from "~/components/empty-placeholder";
 import { DashboardHeader } from "~/components/header";
-import { PostCreateButton } from "~/components/post/post-create-button";
-import { PostItem } from "~/components/post/post-item";
 import { DashboardShell } from "~/components/shell";
 import { db, eq, schema } from "~/server/db";
 
@@ -25,15 +23,15 @@ export default async function DashboardPage() {
   return (
     <DashboardShell>
       <DashboardHeader heading="Posts" text="Create and manage posts.">
-        <PostCreateButton />
+        {/* <PostCreateButton /> */}
       </DashboardHeader>
 
       <div>
         {posts?.length ? (
           <div className="divide-y divide-border rounded-md border">
-            {posts.map((post) => (
+            {/* {posts.map((post) => (
               <PostItem key={post.id} post={post} />
-            ))}
+            ))} */}
           </div>
         ) : (
           <EmptyPlaceholder>
@@ -42,7 +40,7 @@ export default async function DashboardPage() {
             <EmptyPlaceholder.Description>
               You don&apos;t have any posts yet. Start creating content.
             </EmptyPlaceholder.Description>
-            <PostCreateButton variant="outline" />
+            {/* <PostCreateButton variant="outline" /> */}
           </EmptyPlaceholder>
         )}
       </div>

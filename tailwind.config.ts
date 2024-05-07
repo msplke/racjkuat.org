@@ -1,8 +1,7 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import { withUt } from "uploadthing/tw";
 
-export default withUt({
+export default {
   content: ["./src/**/*.{ts,tsx}", "./content/**/*.{md,mdx}"],
   darkMode: ["class"],
   prefix: "",
@@ -84,4 +83,4 @@ export default withUt({
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-}) satisfies Config;
+} satisfies Config;
