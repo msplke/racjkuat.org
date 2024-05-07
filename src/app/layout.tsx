@@ -5,11 +5,13 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import "~/styles/globals.css";
 
-import { Analytics, TailwindIndicator, ThemeProvider } from "~/components";
 import { Toaster } from "~/components/ui/toaster";
 import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 import { TRPCReactProvider } from "~/trpc/react";
+import { Analytics } from "./_components/analytics";
+import { TailwindIndicator } from "./_components/tailwind-indicator";
+import { ThemeProvider } from "./_components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
