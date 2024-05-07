@@ -10,7 +10,7 @@ type SiteConfig = {
     github: string;
     instagram: string;
     tiktok: string;
-    twitter: string;
+    youtube: string;
   };
 };
 
@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
   links: {
     github: "https://github.com/msplke/racjkuat.org",
     instagram: "https://instagram.com/racjkuat",
-    tiktok: "https://tiktok.com/racjkuat",
-    twitter: "https://twitter.com/racjkuat",
+    tiktok: "https://tiktok.com/@racjkuat",
+    youtube: "https://youtube.com/@racjkuat",
   },
 };

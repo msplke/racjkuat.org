@@ -19,9 +19,9 @@ import {
   Settings,
   SunMedium,
   Trash,
-  Twitter,
   User,
   X,
+  Youtube,
   type LucideProps,
 } from "lucide-react";
 
@@ -46,9 +46,9 @@ export const Icons = {
   spinner: Loader2,
   sun: SunMedium,
   trash: Trash,
-  twitter: Twitter,
   user: User,
   warning: AlertTriangle,
+  youtube: Youtube,
 
   // Custom icons
   google: (props: LucideProps) => (
