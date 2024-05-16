@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@clerk/nextjs':
-        specifier: ^5.0.11
-        version: 5.0.11(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^5.0.12
+        version: 5.0.12(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.2)(react@18.3.1)
@@ -25,13 +25,13 @@ importers:
         version: 5.36.2(react@18.3.1)
       '@trpc/client':
         specifier: next
-        version: 11.0.0-rc.370(@trpc/server@11.0.0-rc.370)
+        version: 11.0.0-rc.373(@trpc/server@11.0.0-rc.373)
       '@trpc/react-query':
         specifier: next
-        version: 11.0.0-rc.370(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.370(@trpc/server@11.0.0-rc.370))(@trpc/server@11.0.0-rc.370)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 11.0.0-rc.373(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373))(@trpc/server@11.0.0-rc.373)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trpc/server':
         specifier: next
-        version: 11.0.0-rc.370
+        version: 11.0.0-rc.373
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -272,15 +272,15 @@ packages:
     resolution: {integrity: sha512-e1CD4A5y+H4NbGdGJSE1ZnLGAYaFssrG7NStMmpwaOJry7zF0AbcMMrTzPGWoeu9xrrIRllcOMnAzhehe0/kYg==}
     engines: {node: '>=18.17.0'}
 
-  '@clerk/clerk-react@5.0.7':
-    resolution: {integrity: sha512-YHfVLBRFnJwOnahR3wgHlDytMbplildQ3+cKlCUByUaiUZwnanS469ll5xqd+JQKnycMz9dpNBr+6L6GrnQY/g==}
+  '@clerk/clerk-react@5.1.0':
+    resolution: {integrity: sha512-drc/V0J+h9Jsz32QsL7WmuUhhhkU21KbNz5mwLPbSzBMoLg43sx6aRjJGCfBQYPxPsuFZWDlKoJhX6LZ8yxHcA==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@clerk/nextjs@5.0.11':
-    resolution: {integrity: sha512-YMEaWS0c+wKbH9gZea3Szli6p/QEOqCp8XZ7NhjA5IJcjVZas7w83GmuGSLa+WUGlCqNfDDXDpUFmecMTfOgzA==}
+  '@clerk/nextjs@5.0.12':
+    resolution: {integrity: sha512-uRbt31bfPOhQw14wJUThVGlP1HT2v7Ii+UY00MWFuyx7RmOUgqDnBax2FhUcCEJJhICSU0Xf/TqrWOkQUTEg/A==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       next: ^13.5.4 || ^14.0.3
@@ -299,8 +299,8 @@ packages:
       react-dom:
         optional: true
 
-  '@clerk/types@4.3.1':
-    resolution: {integrity: sha512-hPVutipn4W664eK1YB7RReIKz0pTtNvlWufZ9djgGfFcy//kgHIB+pdQFs1sAFbqYRazxT9AVfiS8d8jij/JBg==}
+  '@clerk/types@4.4.0':
+    resolution: {integrity: sha512-OaT02uLG1P/jBFNyoPM3n9nLdV4H0etTpa/l3iTW4IgOLiAINToLpMOvEpWzKWUq9nvmOouZlBzPVMozu7dwDg==}
     engines: {node: '>=18.17.0'}
 
   '@contentlayer/cli@0.3.4':
@@ -1147,22 +1147,22 @@ packages:
     peerDependencies:
       react: ^18.0.0
 
-  '@trpc/client@11.0.0-rc.370':
-    resolution: {integrity: sha512-3s3NuJ1wwIod96a2BEXwmCacROfeMnUOhBa9pi/ksQzrr0KkFXeJWsLcHwL8XmZRZ93scPLnX7I7jGTW2ol68w==}
+  '@trpc/client@11.0.0-rc.373':
+    resolution: {integrity: sha512-DSKOFjpQycJjwLrJWCpMqfwuFCP99QUPBZBeCb94WTvZUb6wGzOZWQMdIj7EnsR9jgWHlPll1e0s7OgAWxBKqw==}
     peerDependencies:
-      '@trpc/server': 11.0.0-rc.370+1a920ac81
+      '@trpc/server': 11.0.0-rc.373+db2ec5cae
 
-  '@trpc/react-query@11.0.0-rc.370':
-    resolution: {integrity: sha512-DGPJdBsjtshHIh2RLLt+GCEAJaSDoRmJ0hmQF8MGru+7BK5qLlR6N7WFmL4wegs3sV6dov/pyoBXatm0qx3p+g==}
+  '@trpc/react-query@11.0.0-rc.373':
+    resolution: {integrity: sha512-yxHlSiuPkoCnEB0W9yzF5eSX6F09/JFsTpdrwyocTg0Z1TaAYkJ0pUVMP1Gb3bKZEou1x6a8ZJJEqKLZbLPXCA==}
     peerDependencies:
       '@tanstack/react-query': ^5.25.0
-      '@trpc/client': 11.0.0-rc.370+1a920ac81
-      '@trpc/server': 11.0.0-rc.370+1a920ac81
+      '@trpc/client': 11.0.0-rc.373+db2ec5cae
+      '@trpc/server': 11.0.0-rc.373+db2ec5cae
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@trpc/server@11.0.0-rc.370':
-    resolution: {integrity: sha512-wmAujmM8C21UgSk408436OolK5iOKgLUkMvp1LjON++MRNmZYmFb6JmnjPHn0K9wX0V0qMlME2NGb7v8uTB3lw==}
+  '@trpc/server@11.0.0-rc.373':
+    resolution: {integrity: sha512-i5q1KkQ0fuHqYbEPWMfk2rTp31wde8RKo0jxWfwZU8YsnjaErZ8lFnGCxz252l7mMCqT70IKR6c/N5MEXqChDA==}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -3864,18 +3864,18 @@ snapshots:
       - react
       - react-dom
 
-  '@clerk/clerk-react@5.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@clerk/clerk-react@5.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@clerk/shared': 2.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@clerk/types': 4.3.1
+      '@clerk/types': 4.4.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tslib: 2.4.1
 
-  '@clerk/nextjs@5.0.11(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@clerk/nextjs@5.0.12(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@clerk/backend': 1.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@clerk/clerk-react': 5.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@clerk/clerk-react': 5.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/shared': 2.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       crypto-js: 4.2.0
       next: 14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3894,7 +3894,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@clerk/types@4.3.1':
+  '@clerk/types@4.4.0':
     dependencies:
       csstype: 3.1.1
 
@@ -4670,19 +4670,19 @@ snapshots:
       '@tanstack/query-core': 5.36.1
       react: 18.3.1
 
-  '@trpc/client@11.0.0-rc.370(@trpc/server@11.0.0-rc.370)':
+  '@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373)':
     dependencies:
-      '@trpc/server': 11.0.0-rc.370
+      '@trpc/server': 11.0.0-rc.373
 
-  '@trpc/react-query@11.0.0-rc.370(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.370(@trpc/server@11.0.0-rc.370))(@trpc/server@11.0.0-rc.370)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@trpc/react-query@11.0.0-rc.373(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373))(@trpc/server@11.0.0-rc.373)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/react-query': 5.36.2(react@18.3.1)
-      '@trpc/client': 11.0.0-rc.370(@trpc/server@11.0.0-rc.370)
-      '@trpc/server': 11.0.0-rc.370
+      '@trpc/client': 11.0.0-rc.373(@trpc/server@11.0.0-rc.373)
+      '@trpc/server': 11.0.0-rc.373
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@trpc/server@11.0.0-rc.370': {}
+  '@trpc/server@11.0.0-rc.373': {}
 
   '@types/acorn@4.0.6':
     dependencies:
