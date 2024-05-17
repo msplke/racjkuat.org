@@ -2,7 +2,7 @@
 
 > The Rotaract Club of JKUAT (Rac Jkuat in short) is part of a global network of [Rotaract clubs](https://www.rotary.org/en/get-involved/rotaract-clubs) that bring together people ages 18 and older to exchange ideas, develop professional and leadership skills, and have fun through service.
 >
-> This project is aimed at building a Community Management System for Rac Jkuat that will showcase what the club is about, facilitate member management, act as an official communication channel, and improve member engagement.
+> This project is aimed at building a Community Management System for Rac Jkuat that _showcases what the club is all about_, _facilitates member management & engagement_, and _acts as an official communication channel_.
 
 ## Table of Contents
 
@@ -21,8 +21,7 @@
 - Clerk for authentication
 - Tanstack React Query for data fetching and mutation
 - Drizzle ORM for database queries and mutations
-- tRPC for server-side logic
-- Zod for schema declarations and validations
+- Zod for schema declaration and validation
 
 ## Tools Used
 
@@ -30,16 +29,15 @@
 - TypeScript, ESLint and Prettier for typesafe code and best practices
 - GitHub Actions for automated `format`, `lint` and `typecheck` CI steps
 - Renovate for automated dependency updates
-- UploadThing to handle file uploads
+- UploadThing for file uploads
 - Vercel for Deployment
 
 ## Features (WIP)
 
 1. Informative Club Website:
 
-   - Provide a comprehensive overview of what the club is all about; highlight the mission, vision, and values of the club.
-   - Display of club activities, events, and achievements through multimedia content.
-   - Highlight the impact created through various service projects and events.
+   - Provide a comprehensive overview of what the club is all about.
+   - Showcase club activities, events, projects and achievements through multimedia content.
 
 2. Blog Platform:
 
@@ -51,25 +49,6 @@
    - User profiles for each member, providing a platform for personal and professional branding.
    - Members can showcase their skills, achievements, and experiences, enhancing visibility and discoverability to potential employers and clients.
    - Privacy controls allowing members to manage the visibility of their profiles.
-
-4. User-Generated Content:
-
-   - Members can create and publish posts, fostering a sense of community and engagement.
-   - Posts can include images, videos, and other multimedia elements to enrich content.
-   - Moderation features to ensure the content aligns with the club's values and guidelines.
-
-5. Donation Platform:
-
-   - Integration of a secure donation system for individuals or organizations interested in supporting the club financially.
-   - Transparent reporting on the use of donations to build trust among contributors.
-   - Options for one-time and recurring donations.
-   - Mpesa will be the main payment method, but we will also integrate others
-
-6. User-Friendly Design:
-
-   - Develop an intuitive and visually appealing website layout.
-   - Ensure a seamless user experience for members and visitors.
-   - Implement responsive design for compatibility across various devices.
 
 ## Quickstart
 
