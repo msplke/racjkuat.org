@@ -1,29 +1,33 @@
-import { boolean, index, json, text, varchar } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  index,
+  pgTableCreator,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/pg-core";
 
-import { createdAt, pgTable, updatedAt } from "./_table";
+/**
+ * This is an example of how to use the multi-project schema feature of Drizzle ORM.
+ * Use the same database instance for multiple projects.
+ *
+ * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
+ */
+export const pgTable = pgTableCreator((name) => `racjkuat_${name}`);
 
-export const users = pgTable("users", {
-  id: varchar("userId", { length: 64 }).primaryKey(),
-  classification: varchar("classification", { length: 32 }),
-  bio: text("bio"),
-
-  createdAt,
-});
-
-export const posts = pgTable(
-  "posts",
+export const users = pgTable(
+  "users",
   {
-    id: varchar("id", { length: 32 }).primaryKey(), // prefix_ + nanoid(16)
-    title: varchar("title", { length: 64 }).notNull(),
-    content: json("content"),
+    id: varchar("userId", { length: 64 }).primaryKey(),
+    classification: varchar("classification", { length: 32 }),
+    bio: text("bio"),
 
-    authorId: varchar("authorId", { length: 64 }).notNull(),
+    profileIsPublic: boolean("published").default(false),
 
-    published: boolean("published").default(true),
-    createdAt,
-    updatedAt,
+    createdAt: timestamp("createdAt").defaultNow().notNull(),
+    updatedAt: timestamp("updatedAt").defaultNow(),
   },
-  (post) => ({
-    authorIdIdx: index("authorId_idx").on(post.authorId),
+  (user) => ({
+    userIdIdx: index("userId_idx").on(user.id),
   }),
 );
