@@ -8,7 +8,6 @@ import "~/styles/globals.css";
 import { Toaster } from "~/components/ui/toaster";
 import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
-import { TRPCReactProvider } from "~/trpc/react";
 import { Analytics } from "./_components/analytics";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
 import { ThemeProvider } from "./_components/theme-provider";
@@ -69,26 +68,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontHeading.variable,
-        )}
-      >
-        <ClerkProvider>
-          <TRPCReactProvider>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <main className="flex-1">{children}</main>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable,
+            fontHeading.variable,
+          )}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <main className="flex-1">{children}</main>
 
-              <Analytics />
-              <TailwindIndicator />
-              <Toaster />
-            </ThemeProvider>
-          </TRPCReactProvider>
-        </ClerkProvider>
-      </body>
-    </html>
+            <Analytics />
+            <TailwindIndicator />
+            <Toaster />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

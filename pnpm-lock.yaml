@@ -23,15 +23,6 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.36.2
         version: 5.36.2(react@18.3.1)
-      '@trpc/client':
-        specifier: next
-        version: 11.0.0-rc.373(@trpc/server@11.0.0-rc.373)
-      '@trpc/react-query':
-        specifier: next
-        version: 11.0.0-rc.373(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373))(@trpc/server@11.0.0-rc.373)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@trpc/server':
-        specifier: next
-        version: 11.0.0-rc.373
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.2.3(@babel/core@7.24.0)(@opentelemetry/api@1.7.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -1146,23 +1137,6 @@ packages:
     resolution: {integrity: sha512-bHNa+5dead+j6SA8WVlEOPxcGfteVFgdyFTCFcxBgjnPf0fFpHUc7aNZBCnvmPXqy/BeQa9zTuU9ectb7i8ZXA==}
     peerDependencies:
       react: ^18.0.0
-
-  '@trpc/client@11.0.0-rc.373':
-    resolution: {integrity: sha512-DSKOFjpQycJjwLrJWCpMqfwuFCP99QUPBZBeCb94WTvZUb6wGzOZWQMdIj7EnsR9jgWHlPll1e0s7OgAWxBKqw==}
-    peerDependencies:
-      '@trpc/server': 11.0.0-rc.373+db2ec5cae
-
-  '@trpc/react-query@11.0.0-rc.373':
-    resolution: {integrity: sha512-yxHlSiuPkoCnEB0W9yzF5eSX6F09/JFsTpdrwyocTg0Z1TaAYkJ0pUVMP1Gb3bKZEou1x6a8ZJJEqKLZbLPXCA==}
-    peerDependencies:
-      '@tanstack/react-query': ^5.25.0
-      '@trpc/client': 11.0.0-rc.373+db2ec5cae
-      '@trpc/server': 11.0.0-rc.373+db2ec5cae
-      react: '>=18.2.0'
-      react-dom: '>=18.2.0'
-
-  '@trpc/server@11.0.0-rc.373':
-    resolution: {integrity: sha512-i5q1KkQ0fuHqYbEPWMfk2rTp31wde8RKo0jxWfwZU8YsnjaErZ8lFnGCxz252l7mMCqT70IKR6c/N5MEXqChDA==}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -4669,20 +4643,6 @@ snapshots:
     dependencies:
       '@tanstack/query-core': 5.36.1
       react: 18.3.1
-
-  '@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373)':
-    dependencies:
-      '@trpc/server': 11.0.0-rc.373
-
-  '@trpc/react-query@11.0.0-rc.373(@tanstack/react-query@5.36.2(react@18.3.1))(@trpc/client@11.0.0-rc.373(@trpc/server@11.0.0-rc.373))(@trpc/server@11.0.0-rc.373)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@tanstack/react-query': 5.36.2(react@18.3.1)
-      '@trpc/client': 11.0.0-rc.373(@trpc/server@11.0.0-rc.373)
-      '@trpc/server': 11.0.0-rc.373
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@trpc/server@11.0.0-rc.373': {}
 
   '@types/acorn@4.0.6':
     dependencies:
