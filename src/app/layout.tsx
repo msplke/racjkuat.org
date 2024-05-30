@@ -1,4 +1,4 @@
-import { type Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 import LocalFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -60,6 +60,13 @@ export const metadata: Metadata = {
     // images: [`${siteConfig.url}/og.jpg`],
     // creator: "@example",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
