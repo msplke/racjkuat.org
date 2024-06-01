@@ -54,7 +54,7 @@
     "eslint-plugin-drizzle": "^0.2.3",
     "pg": "^8.11.5",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "rehype-pretty-code": "^0.10.2",
     "remark-gfm": "^3.0.1",
