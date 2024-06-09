@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { allAuthors, allPosts } from "contentlayer/generated";
 
 import { Icons } from "~/components";
-import { Mdx } from "~/components/mdx-components";
+import { Mdx } from "~/components/content/mdx-components";
 import { buttonVariants } from "~/components/ui/button";
 import { absoluteUrl, cn, formatDate, getBaseUrl } from "~/lib/utils";
 

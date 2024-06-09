@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { allPages } from "contentlayer/generated";
 
-import { Mdx } from "~/components";
+import { Mdx } from "~/components/content/mdx-components";
 import { siteConfig } from "~/config/site";
 import { absoluteUrl, getBaseUrl } from "~/lib/utils";
 
