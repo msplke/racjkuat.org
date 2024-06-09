@@ -2,7 +2,7 @@ import {
   defineDocumentType,
   makeSource,
   type ComputedFields,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 

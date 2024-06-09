@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import { Callout } from "~/components/callout";
 import { cn } from "~/lib/utils";

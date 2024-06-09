@@ -3,7 +3,7 @@
  * This is especially useful for Docker builds.
  */
 
-import { withContentlayer } from "next-contentlayer";
+import { withContentlayer } from "next-contentlayer2";
 
 // Importing env files here to validate on build
 await import("./src/env.js");
