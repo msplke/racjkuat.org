@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { auth } from "@clerk/nextjs/server";
 
-import { Icons, MainNav, SiteFooter } from "~/components";
+import { Icons } from "~/components/icons";
+import { MainNav } from "~/components/layout/main-nav";
+import { SiteFooter } from "~/components/layout/site-footer";
 import { buttonVariants } from "~/components/ui/button";
 import { marketingConfig } from "~/config/marketing";
 import { cn } from "~/lib/utils";

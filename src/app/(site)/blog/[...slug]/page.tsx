@@ -3,8 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allAuthors, allPosts } from "contentlayer/generated";
 
-import { Icons } from "~/components";
 import { Mdx } from "~/components/content/mdx-components";
+import { Icons } from "~/components/icons";
 import { buttonVariants } from "~/components/ui/button";
 import { absoluteUrl, cn, formatDate, getBaseUrl } from "~/lib/utils";
 

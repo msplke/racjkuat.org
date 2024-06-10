@@ -1,4 +1,4 @@
-import { Icons } from "~/components";
+import { Icons } from "~/components/icons";
 import { type DashboardConfig } from "~/types";
 
 export const dashboardConfig: DashboardConfig = {

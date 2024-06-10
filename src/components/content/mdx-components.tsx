@@ -2,9 +2,9 @@ import NextImage, { type ImageProps } from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 
+import { Callout } from "~/components/content/callout";
 import { MdxCard } from "~/components/content/mdx-card";
-import { Callout } from "~/components/shared/callout";
-import { CopyButton } from "~/components/shared/copy-button";
+import { CopyButton } from "~/components/copy-button";
 import { cn } from "~/lib/utils";
 
 interface ComponentProps {

@@ -1,4 +1,4 @@
-import { Icons } from "~/components";
+import { Icons } from "~/components/icons";
 import { siteConfig } from "~/config/site";
 import type { BenefitItem, FooterItem, MarketingConfig } from "~/types";
 

@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 
-import { DashboardHeader } from "~/components/header";
-import { DashboardShell } from "~/components/shell";
+import { DashboardHeader } from "~/app/(dashboard)/dashboard/_components/header";
+import { DashboardShell } from "~/app/(dashboard)/dashboard/_components/shell";
 
 // import { UserNameForm } from "~/components/user-name-form";
 

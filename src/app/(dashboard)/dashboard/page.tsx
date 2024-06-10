@@ -1,9 +1,9 @@
 import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 
+import { DashboardHeader } from "~/app/(dashboard)/dashboard/_components/header";
+import { DashboardShell } from "~/app/(dashboard)/dashboard/_components/shell";
 import { EmptyPlaceholder } from "~/components/empty-placeholder";
-import { DashboardHeader } from "~/components/header";
-import { DashboardShell } from "~/components/shell";
 
 export const metadata = {
   title: "Dashboard",

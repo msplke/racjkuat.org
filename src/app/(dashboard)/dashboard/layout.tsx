@@ -2,9 +2,9 @@ import { redirect } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 
-import { DashboardNav } from "~/components/dashboard-nav";
-import { MainNav } from "~/components/main-nav";
-import { SiteFooter } from "~/components/site-footer";
+import { DashboardNav } from "~/components/layout/dashboard-nav";
+import { MainNav } from "~/components/layout/main-nav";
+import { SiteFooter } from "~/components/layout/site-footer";
 import { dashboardConfig } from "~/config/dashboard";
 
 interface DashboardLayoutProps {
