@@ -1,9 +1,9 @@
+import { withContentlayer } from "next-contentlayer2";
+
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
  */
-
-import { withContentlayer } from "next-contentlayer2";
 
 // Importing env files here to validate on build
 await import("./src/env.js");
