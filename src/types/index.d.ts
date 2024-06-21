@@ -40,5 +40,5 @@ export type FooterItem = {
   title: string;
   href: string;
   disabled?: boolean;
-  icon: LucideIcon;
+  icon: LucideIcon | ((props: LucideProps) => JSX.Element);
 };

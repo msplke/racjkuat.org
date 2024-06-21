@@ -60,6 +60,16 @@ export const footerItems: FooterItem[] = [
     icon: Icons.instagram,
   },
   {
+    title: "TikTok",
+    href: siteConfig.links.tiktok,
+    icon: Icons.tiktok,
+  },
+  {
+    title: "Twitter",
+    href: siteConfig.links.twitter,
+    icon: Icons.twitter,
+  },
+  {
     title: "YouTube",
     href: siteConfig.links.youtube,
     icon: Icons.youtube,
