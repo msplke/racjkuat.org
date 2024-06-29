@@ -7,7 +7,7 @@ import {
   Flower,
   Moon,
   Settings,
-  SunMedium,
+  Sun,
   X,
   type LucideProps,
 } from "lucide-react";
@@ -22,7 +22,7 @@ export const Icons = {
   moon: Moon,
   post: FileText,
   settings: Settings,
-  sun: SunMedium,
+  sun: Sun,
 
   // Custom icons
   gitHub: (props: LucideProps) => (

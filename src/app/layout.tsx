@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 import LocalFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -6,8 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "~/styles/globals.css";
 
 import { Toaster } from "~/components/ui/toaster";
-import { siteConfig } from "~/config/site";
-import { cn } from "~/lib/utils";
+import { cn, constructMetadata } from "~/lib/utils";
 import { Analytics } from "./_components/analytics";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
 import { ThemeProvider } from "./_components/theme-provider";
@@ -21,46 +20,7 @@ const fontHeading = LocalFont({
   variable: "--font-heading",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  creator: siteConfig.creator,
-  authors: siteConfig.authors,
-  keywords: siteConfig.keywords,
-  icons: {
-    apple: "/apple-touch-icon.png",
-    icon: "/android-chrome-192x192.png",
-    shortcut: "/favicon.ico",
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
-  metadataBase: new URL(siteConfig.url),
-  openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    url: siteConfig.url,
-    type: "website",
-    locale: "en-US",
-    // images: [
-    //   {
-    //     url: siteConfig.ogImage,
-    //     width: 1200,
-    //     height: 630,
-    //     alt: siteConfig.name,
-    //   },
-    // ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    // images: [`${siteConfig.url}/og.jpg`],
-    // creator: "@example",
-  },
-};
+export const metadata = constructMetadata();
 
 export const viewport: Viewport = {
   themeColor: [

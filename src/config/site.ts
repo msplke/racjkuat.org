@@ -1,3 +1,5 @@
+import { getBaseUrl } from "~/lib/utils";
+
 type SiteConfig = {
   name: string;
   url: string;
@@ -5,7 +7,7 @@ type SiteConfig = {
   creator: string;
   authors: { name: string; url: string }[];
   keywords: string[];
-  ogImage?: string;
+  ogImage: string;
   links: {
     github: string;
     instagram: string;
@@ -17,11 +19,12 @@ type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "RacJkuat",
-  url: "https://racjkuat.vercel.app",
+  url: getBaseUrl(),
   description: "Home to the Rotaract Club of Jkuat. Create Hope in the World.",
   creator: "Peter Kibuchi",
-  authors: [{ name: "Peter Kibuchi", url: "https://www.peterkibuchi.com" }],
+  authors: [{ name: "Peter Kibuchi", url: "https://peterkibuchi.vercel.app" }],
   keywords: ["Rotaract", "Rotary"],
+  ogImage: `${getBaseUrl()}/og.png`,
   links: {
     github: "https://github.com/msplke/racjkuat.org",
     instagram: "https://instagram.com/racjkuat",

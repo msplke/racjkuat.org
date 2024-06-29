@@ -1,14 +1,20 @@
 ---
 title: Deploying Next.js Apps
 description: How to deploy your Next.js apps on Vercel.
-# image: /images/blog/blog-post-3.jpg
+image: /images/blog/blog-post-3.jpg
 date: "2023-01-02"
 authors:
-  - johndoe
   - shadcn
+  - mickasmt
+categories:
+  - articles
+  - news
+related:
+  - server-client-components
+  - preview-mode-headless-cms
 ---
 
-<Callout>
+<Callout type="info" twClass="mt-0">
   The text below is from the [Tailwind
   CSS](https://play.tailwindcss.com/uj1vGACRJA?layout=preview) docs. I copied it
   here to test the markdown styles. **Tailwind is awesome. You should use it.**
@@ -214,3 +220,7 @@ What I've written here is probably long enough, but adding this final sentence c
 I've also added support for GitHub Flavored Mardown using `remark-gfm`.
 
 With `remark-gfm`, we get a few extra features in our markdown. Example: autolink literals.
+
+A link like www.example.com or https://example.com would automatically be converted into an `a` tag.
+
+This works for email links too: contact@example.com.
