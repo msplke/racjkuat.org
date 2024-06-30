@@ -6,7 +6,7 @@ export function BlogPosts({ posts }: { posts: Post[] }) {
   return (
     <main className="space-y-8">
       {posts.length ? (
-        <div>
+        <>
           <BlogCard data={posts[0]!} horizontale priority />
 
           <div className="grid gap-8 md:grid-cols-2 md:gap-x-6 md:gap-y-10 xl:grid-cols-3">
@@ -14,7 +14,7 @@ export function BlogPosts({ posts }: { posts: Post[] }) {
               <BlogCard data={post} key={post._id} priority={idx <= 2} />
             ))}
           </div>
-        </div>
+        </>
       ) : (
         <p>No posts published.</p>
       )}

@@ -18,7 +18,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           </p>
         </div>
 
-        <div className="lg flex flex-col items-center gap-2 md:flex-row lg:gap-4">
+        <div className="flex flex-col items-center gap-2 md:flex-row lg:gap-4">
           <div className="ml-auto text-sm text-primary">
             {footerItems.map((item, index) => (
               <Link

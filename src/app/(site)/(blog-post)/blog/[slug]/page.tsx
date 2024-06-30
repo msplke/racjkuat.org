@@ -6,6 +6,7 @@ import { allPosts } from "contentlayer/generated";
 
 import { Authors } from "~/components/content/authors";
 import { Mdx } from "~/components/content/mdx-components";
+import { Icons } from "~/components/icons";
 import { MaxWidthWrapper } from "~/components/max-width-wrapper";
 import { DashboardTableOfContents } from "~/components/toc";
 import { buttonVariants } from "~/components/ui/button";
@@ -116,8 +117,21 @@ export default async function PostPage({
               alt={post.title}
               priority
             />
+
             <div className="px-[.8rem] pb-10 md:px-8">
               <Mdx code={post.body.code} />
+            </div>
+
+            <hr className="mt-12 w-11/12 self-center" />
+
+            <div className="flex justify-center pb-8 pt-2 lg:pb-12 lg:pt-2">
+              <Link
+                href="/blog"
+                className={cn(buttonVariants({ variant: "ghost" }))}
+              >
+                <Icons.chevronLeft className="mr-2 h-4 w-4" />
+                See all posts
+              </Link>
             </div>
           </div>
 
