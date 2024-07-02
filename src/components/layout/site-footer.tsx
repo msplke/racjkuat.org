@@ -28,7 +28,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                 referrerPolicy="no-referrer"
                 className={buttonVariants({ variant: "ghost" })}
               >
-                <item.icon className="h-5 w-5" />
+                <item.icon className="h-4 w-4" />
                 <span className="sr-only">{item.title}</span>
               </Link>
             ))}
