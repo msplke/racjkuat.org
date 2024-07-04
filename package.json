@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.2.1",
+    "@clerk/nextjs": "^5.2.2",
     "@radix-ui/react-toast": "^1.2.1",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query": "^5.49.2",
