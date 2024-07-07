@@ -1,24 +1,14 @@
 import type { Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
-import LocalFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "~/styles/globals.css";
 
+import { fontHeading, fontSans } from "~/assets/fonts";
 import { Toaster } from "~/components/ui/toaster";
 import { cn, constructMetadata } from "~/lib/utils";
 import { Analytics } from "./_components/analytics";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
 import { ThemeProvider } from "./_components/theme-provider";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-const fontHeading = LocalFont({
-  src: "../styles/CalSans-SemiBold.woff2",
-  variable: "--font-heading",
-});
 
 export const metadata = constructMetadata();
 
