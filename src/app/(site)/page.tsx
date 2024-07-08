@@ -7,6 +7,7 @@ export default function IndexPage() {
     <main className="container">
       <HeroLanding />
       <PreviewLanding />
+      {/* <Partners /> */}
 
       <section
         id="benefits"
