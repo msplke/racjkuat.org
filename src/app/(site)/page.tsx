@@ -1,10 +1,12 @@
 import { HeroLanding } from "~/components/sections/hero-landing";
+import { PreviewLanding } from "~/components/sections/preview-landing";
 import { benefits } from "~/config/marketing";
 
 export default function IndexPage() {
   return (
     <main className="container">
       <HeroLanding />
+      <PreviewLanding />
 
       <section
         id="benefits"

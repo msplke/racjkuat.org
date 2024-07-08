@@ -1,6 +1,11 @@
 import { Icons } from "~/components/icons";
 import { siteConfig } from "~/config/site";
-import type { BenefitItem, FooterItem, MarketingConfig } from "~/types";
+import type {
+  BenefitItem,
+  FooterItem,
+  MarketingConfig,
+  PreviewImage,
+} from "~/types";
 
 export const marketingConfig: MarketingConfig = {
   mainNav: [
@@ -14,6 +19,25 @@ export const marketingConfig: MarketingConfig = {
     },
   ],
 };
+
+export const previewImages: PreviewImage[] = [
+  {
+    title: "club-hangout",
+    href: "/images/landing/club-hangout-2023.jpg",
+  },
+  {
+    title: "muthiga",
+    href: "/images/landing/muthiga-2022.jpg",
+  },
+  {
+    title: "maisha-safe-house",
+    href: "/images/landing/maisha-safe-house-2024.jpg",
+  },
+  {
+    title: "fancied-friends",
+    href: "/images/landing/muthiga-2023.jpg",
+  },
+];
 
 export const benefits: BenefitItem[] = [
   {

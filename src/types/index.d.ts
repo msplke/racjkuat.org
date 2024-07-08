@@ -31,6 +31,11 @@ export type DashboardConfig = {
   sidebarNav: SidebarNavItem[];
 };
 
+export type PreviewImage = {
+  title: string;
+  href: string;
+};
+
 export type BenefitItem = {
   title: string;
   description: string;
