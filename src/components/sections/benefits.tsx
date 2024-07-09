@@ -8,7 +8,8 @@ export function Benefits() {
       <div className="pb-6 pt-28">
         <MaxWidthWrapper className="px-0">
           <HeaderSection
-            title="Benefits"
+            label="Benefits"
+            title="Discover what Rotaract has to offer."
             subtitle="Here are some of the benefits of joining our community."
           />
 
