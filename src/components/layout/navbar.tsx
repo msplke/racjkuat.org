@@ -24,7 +24,7 @@ export function NavBar({ scroll = false, userId }: NavBarProps) {
         scroll ? (scrolled ? "border-b" : "bg-transparent") : "border-b"
       }`}
     >
-      <MaxWidthWrapper className="flex h-16 items-center justify-between py-4">
+      <MaxWidthWrapper className="flex h-16 items-center justify-between py-4 xl:px-0">
         <MainNav items={marketingConfig.mainNav} />
 
         <nav>
