@@ -28,7 +28,7 @@
     "drizzle-orm": "^0.31.4",
     "embla-carousel-autoplay": "^8.1.6",
     "embla-carousel-react": "^8.1.6",
-    "lucide-react": "^0.403.0",
+    "lucide-react": "^0.407.0",
     "next": "^14.2.4",
     "next-contentlayer2": "^0.4.6",
     "next-themes": "^0.3.0",
