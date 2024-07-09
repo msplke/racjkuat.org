@@ -62,7 +62,7 @@ export default async function PostPage({
 
   return (
     <>
-      <MaxWidthWrapper className="pt-6 md:pt-10">
+      <MaxWidthWrapper className="pt-6 md:pt-10 xl:px-0">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-4">
             {categories.map((category) => (
@@ -107,7 +107,7 @@ export default async function PostPage({
       <div className="relative">
         <div className="absolute top-52 w-full border-t" />
 
-        <MaxWidthWrapper className="grid grid-cols-4 gap-10 pt-8 max-md:px-0">
+        <MaxWidthWrapper className="grid grid-cols-4 gap-10 pt-8 max-md:px-0 xl:px-0">
           <div className="relative col-span-4 mb-10 flex flex-col space-y-8 bg-background sm:border md:rounded-xl lg:col-span-3">
             <Image
               className="aspect-[1200/630] border-b object-cover md:rounded-t-xl"

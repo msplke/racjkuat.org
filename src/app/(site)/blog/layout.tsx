@@ -9,7 +9,7 @@ export default function BlogLayout({
   return (
     <>
       <BlogHeaderLayout />
-      <MaxWidthWrapper className="pb-16">{children}</MaxWidthWrapper>
+      <MaxWidthWrapper className="pb-16 xl:px-0">{children}</MaxWidthWrapper>
     </>
   );
 }

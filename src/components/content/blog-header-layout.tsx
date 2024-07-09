@@ -21,7 +21,7 @@ export function BlogHeaderLayout() {
 
   return (
     <>
-      <MaxWidthWrapper className="py-6 md:pb-8 md:pt-10">
+      <MaxWidthWrapper className="py-6 md:pb-8 md:pt-10 xl:px-0">
         <div className="max-w-screen-md">
           <h1 className="font-heading text-3xl md:text-4xl">
             {data?.title ?? "Blog"}
