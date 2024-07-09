@@ -41,6 +41,13 @@ export type BenefitItem = {
   description: string;
 };
 
+export type Testimonial = {
+  name: string;
+  job: string;
+  image: string;
+  review: string;
+};
+
 export type FooterItem = {
   title: string;
   href: string;

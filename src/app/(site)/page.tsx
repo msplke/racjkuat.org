@@ -9,6 +9,7 @@ export default function IndexPage() {
       <PreviewLanding />
       {/* <Partners /> */}
       <Benefits />
+      {/* <Testimonials /> */}
     </main>
   );
 }
