@@ -1,4 +1,5 @@
 import {
+  ArrowUpRight,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const Icons = {
+  arrowUpRight: ArrowUpRight,
   check: Check,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
