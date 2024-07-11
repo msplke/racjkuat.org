@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { auth } from "@clerk/nextjs/server";
 
 import { Icons } from "~/components/icons";
 import { buttonVariants } from "~/components/ui/button";
@@ -7,8 +6,6 @@ import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 
 export function HeroLanding() {
-  const { userId } = auth();
-
   return (
     <section className="space-y-6 py-12 sm:py-20">
       <div className="container flex max-w-5xl flex-col items-center gap-4 px-0 text-center">
@@ -35,7 +32,7 @@ export function HeroLanding() {
         </p>
 
         <div className="flex justify-center space-x-4">
-          <Link
+          {/* <Link
             href={userId ? "/dashboard" : "/login"}
             className={cn(buttonVariants({ size: "lg" }), "px-4")}
           >
@@ -46,7 +43,7 @@ export function HeroLanding() {
             ) : (
               <span>Login</span>
             )}
-          </Link>
+          </Link> */}
           <Link
             href="/about"
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}

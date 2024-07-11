@@ -1,13 +1,8 @@
 "use client";
 
-import Link from "next/link";
-
-import { Icons } from "~/components/icons";
 import { MaxWidthWrapper } from "~/components/max-width-wrapper";
-import { buttonVariants } from "~/components/ui/button";
 import { marketingConfig } from "~/config/marketing";
 import { useScroll } from "~/hooks/use-scroll";
-import { cn } from "~/lib/utils";
 import { MainNav } from "./main-nav";
 
 interface NavBarProps {
@@ -15,7 +10,7 @@ interface NavBarProps {
   userId: string | null;
 }
 
-export function NavBar({ scroll = false, userId }: NavBarProps) {
+export function NavBar({ scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
 
   return (
@@ -27,7 +22,7 @@ export function NavBar({ scroll = false, userId }: NavBarProps) {
       <MaxWidthWrapper className="flex h-16 items-center justify-between py-4 xl:px-0">
         <MainNav items={marketingConfig.mainNav} />
 
-        <nav>
+        {/* <nav>
           <Link
             href={userId ? "/dashboard" : "/login"}
             className={cn(buttonVariants({ variant: "secondary" }), "px-4")}
@@ -41,7 +36,7 @@ export function NavBar({ scroll = false, userId }: NavBarProps) {
               <span>Login</span>
             )}
           </Link>
-        </nav>
+        </nav> */}
       </MaxWidthWrapper>
     </header>
   );
