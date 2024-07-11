@@ -43,7 +43,9 @@ export default function PagePage({ params }: { params: { slug: string } }) {
           {page.title}
         </h1>
         {page.description && (
-          <p className="text-xl text-muted-foreground">{page.description}</p>
+          <p className="text-base text-muted-foreground md:text-lg">
+            {page.description}
+          </p>
         )}
       </div>
       <hr className="my-4" />
