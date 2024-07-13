@@ -42,34 +42,34 @@ export const previewImages: PreviewImage[] = [
 
 export const benefits: BenefitItem[] = [
   {
-    title: "Networking",
+    title: "Develop Leadership Skills",
     description:
-      "Rotaract clubs bring together people ages 18 and older to exchange ideas with each other and leaders in the community.",
+      "Gain hands-on experience in leadership roles, enhancing your ability to lead projects, manage teams, and inspire others.",
   },
   {
-    title: "Professional and Leadership Skills",
+    title: "Make a Positive Impact",
     description:
-      "Rotaract provides an opportunity for young people to develop their professional and leadership skills through organizing projects and holding leadership positions within the club.",
+      "Engage in impactful service projects that address the needs of your community.",
   },
   {
-    title: "Personal Growth",
+    title: "Professional Development",
     description:
-      "Rotaract encourages personal growth by offering opportunities for members to step out of their comfort zones, take on new challenges, and develop interpersonal and communication skills.",
+      "Access workshops, seminars, and networking events that help you enhance your professional skills and career prospects.",
   },
   {
-    title: "Community Service",
+    title: "Build Professional Networks",
     description:
-      "Rotaract clubs engage in meaningful community service projects, allowing members to have a positive impact on their local communities and contribute to important causes.",
+      "Connect with like-minded young professionals and mentors who can offer guidance, support, and opportunities for career advancement.",
   },
   {
-    title: "International Connections",
+    title: "Experience Personal Growth",
     description:
-      "Rotaract is a global organization, providing opportunities for members to connect with young adults from different countries and cultures, fostering cross-cultural understanding and collaboration.",
+      "Develop confidence, resilience, and a sense of purpose through active participation in Rotaract’s diverse activities.",
   },
   {
-    title: "Access to Resources",
+    title: "Friendship and Fun",
     description:
-      "Being part of a larger international organization like Rotary International provides Rotaract clubs with access to resources, funding, and support for their projects and initiatives.",
+      "Build lasting friendships and enjoy social activities that create a sense of community and belonging.",
   },
 ];
 
