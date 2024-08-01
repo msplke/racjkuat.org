@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.2.8",
+    "@clerk/nextjs": "^5.2.10",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
     "@t3-oss/env-nextjs": "^0.11.0",
