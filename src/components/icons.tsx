@@ -26,11 +26,11 @@ export const Icons = {
   gitHub: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      imageRendering="optimizeQuality"
+      fillRule="evenodd"
+      clipRule="evenodd"
       viewBox="0 0 640 640"
       {...props}
     >
@@ -44,11 +44,11 @@ export const Icons = {
   instagram: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      imageRendering="optimizeQuality"
+      fillRule="evenodd"
+      clipRule="evenodd"
       viewBox="0 0 512 512"
       {...props}
     >
@@ -62,11 +62,11 @@ export const Icons = {
   tiktok: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      imageRendering="optimizeQuality"
+      fillRule="evenodd"
+      clipRule="evenodd"
       viewBox="0 0 449.45 515.38"
       {...props}
     >
@@ -80,11 +80,11 @@ export const Icons = {
   twitter: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      imageRendering="optimizeQuality"
+      fillRule="evenodd"
+      clipRule="evenodd"
       viewBox="0 0 512 462.799"
       {...props}
     >
@@ -98,11 +98,11 @@ export const Icons = {
   youtube: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+      imageRendering="optimizeQuality"
+      fillRule="evenodd"
+      clipRule="evenodd"
       viewBox="0 0 640 640"
       {...props}
     >
