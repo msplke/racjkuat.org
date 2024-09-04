@@ -17,6 +17,16 @@ const computedFields: ComputedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
+  images: {
+    type: "list",
+    resolve: (doc) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return (
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+        doc.body.raw.match(/(?<=<Image[^>]*\bsrc=")[^"]+(?="[^>]*\/>)/g) || []
+      );
+    },
+  },
 };
 
 export const Guide = defineDocumentType(() => ({

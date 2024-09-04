@@ -1,9 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { BlurImage } from "~/components/blur-image";
 import { BLOG_AUTHORS } from "~/config/blog";
+import { getBlurDataURL } from "~/lib/utils";
 
-export function Authors({
+export async function Authors({
   username,
   imageOnly,
 }: {
@@ -21,11 +22,14 @@ export function Authors({
   }
 
   return imageOnly ? (
-    <Image
+    <BlurImage
       src={author.image}
       alt={author.name}
       width={32}
       height={32}
+      priority
+      placeholder="blur"
+      blurDataURL={await getBlurDataURL(author.image)}
       className="size-8 rounded-full transition-all group-hover:brightness-90"
     />
   ) : (
@@ -35,11 +39,14 @@ export function Authors({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image
+      <BlurImage
         src={author.image}
         alt={author.name}
         width={40}
         height={40}
+        priority
+        placeholder="blur"
+        blurDataURL={await getBlurDataURL(author.image)}
         className="size-8 rounded-full transition-all group-hover:brightness-90 md:size-10"
       />
       <div className="flex flex-col -space-y-0.5">

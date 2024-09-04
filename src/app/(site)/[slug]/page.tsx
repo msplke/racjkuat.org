@@ -4,7 +4,7 @@ import { allPages } from "contentlayer/generated";
 
 import { Mdx } from "~/components/content/mdx-components";
 import { siteConfig } from "~/config/site";
-import { absoluteUrl, constructMetadata } from "~/lib/utils";
+import { absoluteUrl, constructMetadata, getBlurDataURL } from "~/lib/utils";
 
 export function generateStaticParams() {
   return allPages.map((page) => ({
@@ -31,10 +31,23 @@ export async function generateMetadata({
   });
 }
 
-export default function PagePage({ params }: { params: { slug: string } }) {
+export default async function PagePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const page = allPages.find((page) => page.slugAsParams === params.slug);
 
   if (!page) notFound();
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const images = await Promise.all(
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+    page.images.map(async (src: string) => ({
+      src,
+      blurDataURL: await getBlurDataURL(src),
+    })),
+  );
 
   return (
     <article className="container max-w-3xl py-6 lg:py-12">
@@ -49,7 +62,8 @@ export default function PagePage({ params }: { params: { slug: string } }) {
         )}
       </div>
       <hr className="my-4" />
-      <Mdx code={page.body.code} />
+      {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+      <Mdx code={page.body.code} images={images} />
     </article>
   );
 }

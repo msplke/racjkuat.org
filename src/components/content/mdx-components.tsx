@@ -1,14 +1,14 @@
-import NextImage, { type ImageProps } from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 
+import { BlurImage } from "~/components/blur-image";
 import { Callout } from "~/components/content/callout";
 import { MdxCard } from "~/components/content/mdx-card";
 import { CopyButton } from "~/components/copy-button";
 import { cn } from "~/lib/utils";
 
 interface ComponentProps {
-  className: string;
+  className?: string;
 }
 
 const components = {
@@ -170,7 +170,6 @@ const components = {
   ),
   Callout,
   Card: MdxCard,
-  Image: (props: ImageProps) => <NextImage {...props} />,
 
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
@@ -191,15 +190,38 @@ const components = {
 
 interface MdxProps {
   code: string;
+  images?: { alt: string; src: string; blurDataURL: string }[];
 }
 
-export function Mdx({ code }: MdxProps) {
+export function Mdx({ code, images }: MdxProps) {
   const Component = useMDXComponent(code);
+
+  const MDXImage = (props: { alt: string; src: string }) => {
+    if (!images) return null;
+
+    const blurDataURL = images.find(
+      (image) => image.src === props.src,
+    )?.blurDataURL;
+
+    return (
+      <div className="mt-5 w-full overflow-hidden rounded-lg border">
+        <BlurImage
+          {...props}
+          blurDataURL={blurDataURL}
+          className="size-full object-cover object-center"
+        />
+      </div>
+    );
+  };
 
   return (
     <div className="mdx">
-      {/* @ts-expect-error Type {...} is not assignable to type MDXComponents */}
-      <Component components={components} />
+      <Component
+        components={{
+          ...components,
+          Image: MDXImage,
+        }}
+      />
     </div>
   );
 }

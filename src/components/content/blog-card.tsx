@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { type Post } from "contentlayer/generated";
 
-import { cn, formatDate } from "~/lib/utils";
+import { BlurImage } from "~/components/blur-image";
+import { cn, formatDate, placeholderBlurhash } from "~/lib/utils";
 import { Authors } from "./authors";
 
 export function BlogCard({
@@ -10,7 +10,7 @@ export function BlogCard({
   priority,
   horizontale = false,
 }: {
-  data: Post;
+  data: Post & { blurDataURL: string };
   priority?: boolean;
   horizontale?: boolean;
 }) {
@@ -24,17 +24,22 @@ export function BlogCard({
       )}
     >
       {data.image && (
-        <Image
-          alt={data.title}
-          src={data.image}
-          width={804}
-          height={452}
-          className={cn(
-            "w-full rounded-xl border object-cover object-center",
-            horizontale ? "lg:h-72" : null,
-          )}
-          priority={priority}
-        />
+        <div className="w-full overflow-hidden rounded-xl border">
+          <BlurImage
+            alt={data.title}
+            blurDataURL={data.blurDataURL ?? placeholderBlurhash}
+            className={cn(
+              "size-full object-cover object-center",
+              horizontale ? "lg:h-72" : null,
+            )}
+            width={800}
+            height={400}
+            priority={priority}
+            placeholder="blur"
+            src={data.image}
+            sizes="(max-width: 768px) 750px, 600px"
+          />
+        </div>
       )}
 
       <div
@@ -55,8 +60,6 @@ export function BlogCard({
         </div>
 
         <div className="mt-4 flex items-center space-x-3">
-          {/* <Author username={data.authors[0]} imageOnly /> */}
-
           <div className="flex items-center -space-x-2">
             {data.authors.map((author) => (
               <Authors username={author} key={data._id + author} imageOnly />

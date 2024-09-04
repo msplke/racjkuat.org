@@ -1,9 +1,9 @@
 import { type Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated";
 
+import { BlurImage } from "~/components/blur-image";
 import { Authors } from "~/components/content/authors";
 import { Mdx } from "~/components/content/mdx-components";
 import { Icons } from "~/components/icons";
@@ -13,7 +13,14 @@ import { buttonVariants } from "~/components/ui/button";
 import { BLOG_CATEGORIES } from "~/config/blog";
 import { siteConfig } from "~/config/site";
 import { getTableOfContents } from "~/lib/toc";
-import { absoluteUrl, cn, constructMetadata, formatDate } from "~/lib/utils";
+import {
+  absoluteUrl,
+  cn,
+  constructMetadata,
+  formatDate,
+  getBlurDataURL,
+  placeholderBlurhash,
+} from "~/lib/utils";
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -59,6 +66,18 @@ export default async function PostPage({
     ) ?? [];
 
   const toc = await getTableOfContents(post.body.raw);
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const [thumbnailBlurhash, images] = await Promise.all([
+    getBlurDataURL(post.image),
+    await Promise.all(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+      post.images.map(async (src: string) => ({
+        src,
+        blurDataURL: await getBlurDataURL(src),
+      })),
+    ),
+  ]);
 
   return (
     <>
@@ -109,17 +128,22 @@ export default async function PostPage({
 
         <MaxWidthWrapper className="grid grid-cols-4 gap-10 pt-8 max-md:px-0 xl:px-0">
           <div className="relative col-span-4 mb-10 flex flex-col space-y-8 bg-background sm:border md:rounded-xl lg:col-span-3">
-            <Image
-              className="aspect-[1200/630] border-b object-cover md:rounded-t-xl"
+            <BlurImage
               src={post.image}
+              alt={post.title}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              blurDataURL={thumbnailBlurhash ?? placeholderBlurhash}
+              className="aspect-[1200/630] border-b object-cover md:rounded-t-xl"
               width={1200}
               height={630}
-              alt={post.title}
               priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 770px, 1000px"
             />
 
             <div className="px-[.8rem] pb-10 md:px-8">
-              <Mdx code={post.body.code} />
+              {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+              <Mdx code={post.body.code} images={images} />
             </div>
 
             <hr className="mt-12 w-11/12 self-center" />

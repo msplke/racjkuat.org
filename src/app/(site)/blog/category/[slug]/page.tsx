@@ -5,7 +5,7 @@ import { allPosts } from "contentlayer/generated";
 import { BlogCard } from "~/components/content/blog-card";
 import { BLOG_CATEGORIES } from "~/config/blog";
 import { siteConfig } from "~/config/site";
-import { constructMetadata } from "~/lib/utils";
+import { constructMetadata, getBlurDataURL } from "~/lib/utils";
 
 export function generateStaticParams() {
   return BLOG_CATEGORIES.map((category) => ({
@@ -32,16 +32,24 @@ export async function generateMetadata({
   });
 }
 
-export default function BlogCategory({ params }: { params: { slug: string } }) {
-  const data = BLOG_CATEGORIES.find(
-    (category) => category.slug === params.slug,
+export default async function BlogCategory({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const category = BLOG_CATEGORIES.find((ctg) => ctg.slug === params.slug);
+
+  if (!category) notFound();
+
+  const articles = await Promise.all(
+    allPosts
+      .filter((post) => post.categories.includes(category.slug))
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map(async (post) => ({
+        ...post,
+        blurDataURL: await getBlurDataURL(post.image),
+      })),
   );
-
-  if (!data) notFound();
-
-  const articles = allPosts
-    .filter((post) => post.categories.includes(data.slug))
-    .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <div>
