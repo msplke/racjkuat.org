@@ -4,10 +4,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Copy,
-  FileText,
   Flower,
   Moon,
-  Settings,
   Sun,
   X,
   type LucideProps,
@@ -22,8 +20,6 @@ export const Icons = {
   copy: Copy,
   logo: Flower,
   moon: Moon,
-  post: FileText,
-  settings: Settings,
   sun: Sun,
 
   // Custom icons

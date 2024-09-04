@@ -1,16 +1,12 @@
 "use client";
 
 import { MaxWidthWrapper } from "~/components/max-width-wrapper";
+import { ModeToggle } from "~/components/mode-toggle";
 import { marketingConfig } from "~/config/marketing";
 import { useScroll } from "~/hooks/use-scroll";
 import { MainNav } from "./main-nav";
 
-interface NavBarProps {
-  scroll?: boolean;
-  userId: string | null;
-}
-
-export function NavBar({ scroll = false }: NavBarProps) {
+export function NavBar({ scroll = false }: { scroll?: boolean }) {
   const scrolled = useScroll(50);
 
   return (
@@ -22,21 +18,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
       <MaxWidthWrapper className="flex h-16 items-center justify-between py-4 xl:px-0">
         <MainNav items={marketingConfig.mainNav} />
 
-        {/* <nav>
-          <Link
-            href={userId ? "/dashboard" : "/login"}
-            className={cn(buttonVariants({ variant: "secondary" }), "px-4")}
-          >
-            {userId ? (
-              <span className="flex items-center">
-                Dashboard
-                <Icons.chevronRight className="ml-1 h-4 w-4" />
-              </span>
-            ) : (
-              <span>Login</span>
-            )}
-          </Link>
-        </nav> */}
+        <ModeToggle />
       </MaxWidthWrapper>
     </header>
   );

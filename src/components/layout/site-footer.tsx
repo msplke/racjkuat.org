@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { Icons } from "~/components/icons";
-import { ModeToggle } from "~/components/mode-toggle";
 import { buttonVariants } from "~/components/ui/button";
 import { footerItems } from "~/config/marketing";
 import { cn } from "~/lib/utils";
@@ -15,8 +14,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <div className="flex flex-col items-center gap-4 px-0 md:flex-row md:gap-2">
             <Icons.logo />
             <p className="text-center text-sm leading-loose md:text-left">
-              © {new Date().getFullYear()} Rotaract Club of JKUAT. All rights
-              reserved.
+              Copyright © {new Date().getFullYear()} Rotaract Club of JKUAT.
             </p>
           </div>
 
@@ -35,8 +33,6 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                 </Link>
               ))}
             </div>
-
-            <ModeToggle />
           </div>
         </div>
       </MaxWidthWrapper>

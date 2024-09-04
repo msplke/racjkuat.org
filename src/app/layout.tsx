@@ -1,10 +1,8 @@
 import type { Viewport } from "next";
-import { ClerkProvider } from "@clerk/nextjs";
 
 import "~/styles/globals.css";
 
 import { fontHeading, fontSans } from "~/assets/fonts";
-import { Toaster } from "~/components/ui/toaster";
 import { cn, constructMetadata } from "~/lib/utils";
 import { Analytics } from "./_components/analytics";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
@@ -25,24 +23,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
-            fontHeading.variable,
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className="flex-1">{children}</main>
+    <html lang="en">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          fontHeading.variable,
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className="flex-1">{children}</main>
 
-            <Analytics />
-            <TailwindIndicator />
-            <Toaster />
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+          <Analytics />
+          <TailwindIndicator />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
