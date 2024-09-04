@@ -6,29 +6,8 @@ export type MainNavItem = {
   disabled?: boolean;
 };
 
-export type SidebarNavItem = {
-  title: string;
-  icon: LucideIcon;
-  disabled?: boolean;
-  external?: boolean;
-} & (
-  | {
-      href: string;
-      items?: never;
-    }
-  | {
-      href?: string;
-      items: NavLink[];
-    }
-);
-
 export type MarketingConfig = {
   mainNav: MainNavItem[];
-};
-
-export type DashboardConfig = {
-  mainNav: MainNavItem[];
-  sidebarNav: SidebarNavItem[];
 };
 
 export type PreviewImage = {
@@ -43,7 +22,7 @@ export type BenefitItem = {
 
 export type Testimonial = {
   name: string;
-  job: string;
+  classification: string;
   image: string;
   review: string;
 };
