@@ -34,7 +34,7 @@ export function Testimonials() {
                           {item.name}
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          {item.job}
+                          {item.classification}
                         </p>
                       </div>
                     </div>
