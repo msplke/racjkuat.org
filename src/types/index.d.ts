@@ -22,7 +22,7 @@ export type BenefitItem = {
 
 export type Testimonial = {
   name: string;
-  job: string;
+  classification: string;
   image: string;
   review: string;
 };
