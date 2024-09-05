@@ -1,9 +1,9 @@
 import { type Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated";
 
+import { BlurImage } from "~/components/blur-image";
 import { Authors } from "~/components/content/authors";
 import { Mdx } from "~/components/content/mdx-components";
 import { Icons } from "~/components/icons";
@@ -13,7 +13,14 @@ import { buttonVariants } from "~/components/ui/button";
 import { BLOG_CATEGORIES } from "~/config/blog";
 import { siteConfig } from "~/config/site";
 import { getTableOfContents } from "~/lib/toc";
-import { absoluteUrl, cn, constructMetadata, formatDate } from "~/lib/utils";
+import {
+  absoluteUrl,
+  cn,
+  constructMetadata,
+  formatDate,
+  getBlurDataURL,
+  placeholderBlurhash,
+} from "~/lib/utils";
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -53,12 +60,13 @@ export default async function PostPage({
     post.categories.includes(category.slug),
   );
 
-  const relatedArticles =
+  const relatedPosts =
     post.related?.map(
       (slug) => allPosts.find((post) => post.slugAsParams === slug)!,
     ) ?? [];
 
   const toc = await getTableOfContents(post.body.raw);
+  const thumbnailBlurhash = await getBlurDataURL(post.image);
 
   return (
     <>
@@ -109,13 +117,16 @@ export default async function PostPage({
 
         <MaxWidthWrapper className="grid grid-cols-4 gap-10 pt-8 max-md:px-0 xl:px-0">
           <div className="relative col-span-4 mb-10 flex flex-col space-y-8 bg-background sm:border md:rounded-xl lg:col-span-3">
-            <Image
-              className="aspect-[1200/630] border-b object-cover md:rounded-t-xl"
+            <BlurImage
               src={post.image}
+              alt={post.title}
               width={1200}
               height={630}
-              alt={post.title}
               priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 770px, 1000px"
+              blurDataURL={thumbnailBlurhash ?? placeholderBlurhash}
+              className="aspect-[1200/630] border-b object-cover md:rounded-t-xl"
             />
 
             <div className="px-[.8rem] pb-10 md:px-8">
@@ -142,14 +153,14 @@ export default async function PostPage({
       </div>
 
       <MaxWidthWrapper>
-        {relatedArticles.length > 0 && (
+        {relatedPosts.length > 0 && (
           <div className="flex flex-col space-y-4 pb-16">
             <p className="font-heading text-2xl text-foreground">
               More Articles
             </p>
 
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-6">
-              {relatedArticles.map((post) => (
+              {relatedPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={post.slug}

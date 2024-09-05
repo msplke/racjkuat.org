@@ -8,7 +8,7 @@ import { CopyButton } from "~/components/copy-button";
 import { cn } from "~/lib/utils";
 
 interface ComponentProps {
-  className: string;
+  className?: string;
 }
 
 const components = {
@@ -198,7 +198,6 @@ export function Mdx({ code }: MdxProps) {
 
   return (
     <div className="mdx">
-      {/* @ts-expect-error Type {...} is not assignable to type MDXComponents */}
       <Component components={components} />
     </div>
   );

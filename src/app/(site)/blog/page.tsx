@@ -1,9 +1,8 @@
 import { allPosts } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 
 import { BlogPosts } from "~/components/content/blog-posts";
 import { siteConfig } from "~/config/site";
-import { constructMetadata } from "~/lib/utils";
+import { constructMetadata, getBlurDataURL } from "~/lib/utils";
 
 export const metadata = constructMetadata({
   title: `Blog | ${siteConfig.name}`,
@@ -11,12 +10,16 @@ export const metadata = constructMetadata({
     "Official updates and announcements, as well as articles by members of the community.",
 });
 
-export default function BlogPage() {
-  const posts = allPosts
-    .filter((post) => post.published)
-    .sort((a, b) => {
-      return compareDesc(new Date(a.date), new Date(b.date));
-    });
+export default async function BlogPage() {
+  const posts = await Promise.all(
+    allPosts
+      .filter((post) => post.published)
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map(async (post) => ({
+        ...post,
+        blurDataURL: await getBlurDataURL(post.image),
+      })),
+  );
 
   return <BlogPosts posts={posts} />;
 }
