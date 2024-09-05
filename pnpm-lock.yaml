@@ -27,11 +27,11 @@ importers:
         specifier: ^0.5.0
         version: 0.5.0(esbuild@0.19.10)
       embla-carousel-autoplay:
-        specifier: ^8.2.0
-        version: 8.2.0(embla-carousel@8.2.0)
+        specifier: ^8.2.1
+        version: 8.2.1(embla-carousel@8.2.1)
       embla-carousel-react:
-        specifier: ^8.2.0
-        version: 8.2.0(react@18.3.1)
+        specifier: ^8.2.1
+        version: 8.2.1(react@18.3.1)
       lucide-react:
         specifier: ^0.438.0
         version: 0.438.0(react@18.3.1)
@@ -73,8 +73,8 @@ importers:
         specifier: ^8.56.12
         version: 8.56.12
       '@types/node':
-        specifier: ^20.16.3
-        version: 20.16.3
+        specifier: ^20.16.5
+        version: 20.16.5
       '@types/react':
         specifier: ^18.3.5
         version: 18.3.5
@@ -97,8 +97,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       postcss:
-        specifier: ^8.4.44
-        version: 8.4.44
+        specifier: ^8.4.45
+        version: 8.4.45
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -110,7 +110,7 @@ importers:
         version: 7.1.0
       rehype-pretty-code:
         specifier: ^0.14.0
-        version: 0.14.0(shiki@1.16.1)
+        version: 0.14.0(shiki@1.16.2)
       rehype-slug:
         specifier: ^6.0.0
         version: 6.0.0
@@ -121,8 +121,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       shiki:
-        specifier: ^1.16.1
-        version: 1.16.1
+        specifier: ^1.16.2
+        version: 1.16.2
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.10
@@ -923,8 +923,8 @@ packages:
   '@rushstack/eslint-patch@1.6.1':
     resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
 
-  '@shikijs/core@1.16.1':
-    resolution: {integrity: sha512-aI0hBtw+a6KsJp2jcD4YuQqKpeCbURMZbhHVozDknJpm+KJqeMRkEnfBC8BaKE/5XC+uofPgCLsa/TkTk0Ba0w==}
+  '@shikijs/core@1.16.2':
+    resolution: {integrity: sha512-XSVH5OZCvE4WLMgdoBqfPMYmGHGmCC3OgZhw0S7KcSi2XKZ+5oHGe71GFnTljgdOxvxx5WrRks6QoTLKrl1eAA==}
 
   '@shikijs/vscode-textmate@9.2.0':
     resolution: {integrity: sha512-5FinaOp6Vdh/dl4/yaOTh0ZeKch+rYS8DUb38V3GMKYVkdqzxw53lViRKUYkVILRiVQT7dcPC7VvAKOR73zVtQ==}
@@ -991,8 +991,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@20.16.3':
-    resolution: {integrity: sha512-/wdGiWRkMOm53gAsSyFMXFZHbVg7C6CbkrzHNpaHoYfsUWPg7m6ZRKtvQjgvQ9i8WT540a3ydRlRQbxjY30XxQ==}
+  '@types/node@20.16.5':
+    resolution: {integrity: sha512-VwYCweNo3ERajwy0IUlqqcyZ8/A7Zwa9ZP3MnENWcB11AejO+tLy3pu850goUW2FC/IJMdZUfKpX/yxL1gymCA==}
 
   '@types/prop-types@15.7.11':
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
@@ -1447,23 +1447,23 @@ packages:
   electron-to-chromium@1.4.689:
     resolution: {integrity: sha512-GatzRKnGPS1go29ep25reM94xxd1Wj8ritU0yRhCJ/tr1Bg8gKnm6R9O/yPOhGQBoLMZ9ezfrpghNaTw97C/PQ==}
 
-  embla-carousel-autoplay@8.2.0:
-    resolution: {integrity: sha512-+u5I5h27tnEl9D5IiY4n3Q5DrT2XuNggZ6P/785cETYZslEVGHPevbyzuryxGNi1taXfrgvwrbMnisfUyUmytw==}
+  embla-carousel-autoplay@8.2.1:
+    resolution: {integrity: sha512-jhE2aNz5pbmICVkz3XyB3uACgkk4YvbnOZeMcoeIMjfycierQvmcice107w73kYaPrQSzCrHLNkKNmq9eA2iOQ==}
     peerDependencies:
-      embla-carousel: 8.2.0
+      embla-carousel: 8.2.1
 
-  embla-carousel-react@8.2.0:
-    resolution: {integrity: sha512-dWqbmaEBQjeAcy/EKrcAX37beVr0ubXuHPuLZkx27z58V1FIvRbbMb4/c3cLZx0PAv/ofngX2QFrwUB+62SPnw==}
+  embla-carousel-react@8.2.1:
+    resolution: {integrity: sha512-YKtARk101mp00Zb6UAFkkvK+5XRo92LAtO9xLFeDnQ/XU9DqFhKnRy1CedRRj0/RSk6MTFDx3MqOQue3gJj9DA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.1 || ^18.0.0
 
-  embla-carousel-reactive-utils@8.2.0:
-    resolution: {integrity: sha512-ZdaPNgMydkPBiDRUv+wRIz3hpZJ3LKrTyz+XWi286qlwPyZFJDjbzPBiXnC3czF9N/nsabSc7LTRvGauUzwKEg==}
+  embla-carousel-reactive-utils@8.2.1:
+    resolution: {integrity: sha512-LXMVOOyv09ZKRxRQXYMX1FpVGcypsuxdcidNcNlBQUN2mK7hkmjVFQwwhfnnY39KMi88XYnYPBgMxfTe0vxSrA==}
     peerDependencies:
-      embla-carousel: 8.2.0
+      embla-carousel: 8.2.1
 
-  embla-carousel@8.2.0:
-    resolution: {integrity: sha512-rf2GIX8rab9E6ZZN0Uhz05746qu2KrDje9IfFyHzjwxLwhvGjUt6y9+uaY1Sf+B0OPSa3sgas7BE2hWZCtopTA==}
+  embla-carousel@8.2.1:
+    resolution: {integrity: sha512-9mTDtyMZJhFuuW5pixhTT4iLiJB1l3dH3IpXUKCsgLlRlHCiySf/wLKy5xIAzmxIsokcQ50xea8wi7BCt0+Rxg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2592,8 +2592,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.4.44:
-    resolution: {integrity: sha512-Aweb9unOEpQ3ezu4Q00DPvvM2ZTUitJdNKeP/+uQgr1IBIqu574IaZoURId7BKtWMREwzKa9OgzPzezWGPWFQw==}
+  postcss@8.4.45:
+    resolution: {integrity: sha512-7KTLTdzdZZYscUc65XmjFiB73vBhBfbPztCYdUNvlaso9PrzjzcmjqBPR0lNGkcVlcO4BjiO5rK/qNz+XAen1Q==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2856,8 +2856,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.16.1:
-    resolution: {integrity: sha512-tCJIMaxDVB1mEIJ5TvfZU7kCPB5eo9fli5+21Olc/bmyv+w8kye3JOp+LZRmGkAyT71hrkefQhTiY+o9mBikRQ==}
+  shiki@1.16.2:
+    resolution: {integrity: sha512-gSym0hZf5a1U0iDPsdoOAZbvoi+e0c6c3NKAi03FoSLTm7oG20tum29+gk0wzzivOasn3loxfGUPT+jZXIUbWg==}
 
   side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
@@ -3600,7 +3600,7 @@ snapshots:
   '@grpc/grpc-js@1.9.13':
     dependencies:
       '@grpc/proto-loader': 0.7.10
-      '@types/node': 20.16.3
+      '@types/node': 20.16.5
 
   '@grpc/proto-loader@0.7.10':
     dependencies:
@@ -4043,7 +4043,7 @@ snapshots:
 
   '@rushstack/eslint-patch@1.6.1': {}
 
-  '@shikijs/core@1.16.1':
+  '@shikijs/core@1.16.2':
     dependencies:
       '@shikijs/vscode-textmate': 9.2.0
       '@types/hast': 3.0.4
@@ -4113,7 +4113,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@20.16.3':
+  '@types/node@20.16.5':
     dependencies:
       undici-types: 6.19.6
 
@@ -4603,21 +4603,21 @@ snapshots:
 
   electron-to-chromium@1.4.689: {}
 
-  embla-carousel-autoplay@8.2.0(embla-carousel@8.2.0):
+  embla-carousel-autoplay@8.2.1(embla-carousel@8.2.1):
     dependencies:
-      embla-carousel: 8.2.0
+      embla-carousel: 8.2.1
 
-  embla-carousel-react@8.2.0(react@18.3.1):
+  embla-carousel-react@8.2.1(react@18.3.1):
     dependencies:
-      embla-carousel: 8.2.0
-      embla-carousel-reactive-utils: 8.2.0(embla-carousel@8.2.0)
+      embla-carousel: 8.2.1
+      embla-carousel-reactive-utils: 8.2.1(embla-carousel@8.2.1)
       react: 18.3.1
 
-  embla-carousel-reactive-utils@8.2.0(embla-carousel@8.2.0):
+  embla-carousel-reactive-utils@8.2.1(embla-carousel@8.2.1):
     dependencies:
-      embla-carousel: 8.2.0
+      embla-carousel: 8.2.1
 
-  embla-carousel@8.2.0: {}
+  embla-carousel@8.2.1: {}
 
   emoji-regex@8.0.0: {}
 
@@ -6256,28 +6256,28 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  postcss-import@15.1.0(postcss@8.4.44):
+  postcss-import@15.1.0(postcss@8.4.45):
     dependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
 
-  postcss-js@4.0.1(postcss@8.4.44):
+  postcss-js@4.0.1(postcss@8.4.45):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.44
+      postcss: 8.4.45
 
-  postcss-load-config@4.0.2(postcss@8.4.44):
+  postcss-load-config@4.0.2(postcss@8.4.45):
     dependencies:
       lilconfig: 3.0.0
       yaml: 2.3.4
     optionalDependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
 
-  postcss-nested@6.0.1(postcss@8.4.44):
+  postcss-nested@6.0.1(postcss@8.4.45):
     dependencies:
-      postcss: 8.4.44
+      postcss: 8.4.45
       postcss-selector-parser: 6.0.14
 
   postcss-selector-parser@6.0.10:
@@ -6298,7 +6298,7 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  postcss@8.4.44:
+  postcss@8.4.45:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
@@ -6334,7 +6334,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.16.3
+      '@types/node': 20.16.5
       long: 5.2.3
 
   punycode@2.3.1: {}
@@ -6421,13 +6421,13 @@ snapshots:
       hast-util-from-html: 2.0.1
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.0(shiki@1.16.1):
+  rehype-pretty-code@0.14.0(shiki@1.16.2):
     dependencies:
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.0
       parse-numeric-range: 1.3.0
       rehype-parse: 9.0.0
-      shiki: 1.16.1
+      shiki: 1.16.2
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
@@ -6592,9 +6592,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.16.1:
+  shiki@1.16.2:
     dependencies:
-      '@shikijs/core': 1.16.1
+      '@shikijs/core': 1.16.2
       '@shikijs/vscode-textmate': 9.2.0
       '@types/hast': 3.0.4
 
@@ -6748,11 +6748,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.1
-      postcss: 8.4.44
-      postcss-import: 15.1.0(postcss@8.4.44)
-      postcss-js: 4.0.1(postcss@8.4.44)
-      postcss-load-config: 4.0.2(postcss@8.4.44)
-      postcss-nested: 6.0.1(postcss@8.4.44)
+      postcss: 8.4.45
+      postcss-import: 15.1.0(postcss@8.4.45)
+      postcss-js: 4.0.1(postcss@8.4.45)
+      postcss-load-config: 4.0.2(postcss@8.4.45)
+      postcss-nested: 6.0.1(postcss@8.4.45)
       postcss-selector-parser: 6.0.14
       resolve: 1.22.8
       sucrase: 3.35.0
