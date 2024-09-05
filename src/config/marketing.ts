@@ -23,20 +23,32 @@ export const marketingConfig: MarketingConfig = {
 
 export const previewImages: PreviewImage[] = [
   {
-    title: "club-hangout",
+    title: "club-hangout-2023",
     href: "/images/landing/club-hangout-2023.jpg",
   },
   {
-    title: "muthiga",
+    title: "muthiga-2022",
     href: "/images/landing/muthiga-2022.jpg",
-  },
-  {
-    title: "maisha-safe-house",
-    href: "/images/landing/maisha-safe-house-2024.jpg",
   },
   {
     title: "fancied-friends",
     href: "/images/landing/muthiga-2023.jpg",
+  },
+  {
+    title: "maisha-safe-house-2024",
+    href: "/images/landing/maisha-safe-house-2024.jpg",
+  },
+  {
+    title: "beautiful-people",
+    href: "/images/landing/installation-2024.jpg",
+  },
+  {
+    title: "beautiful-smiles",
+    href: "/images/landing/installation-2024-2.jpg",
+  },
+  {
+    title: "membership-drive-2024",
+    href: "/images/landing/membership-drive-2024.jpg",
   },
 ];
 
