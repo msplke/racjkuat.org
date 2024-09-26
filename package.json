@@ -29,7 +29,7 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.6",
+    "vaul": "^0.9.9",
     "zod": "^3.23.8"
   },
   "devDependencies": {
