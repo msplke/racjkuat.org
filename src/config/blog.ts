@@ -6,6 +6,11 @@ export const BLOG_AUTHORS: Record<
     link?: string;
   }
 > = {
+  hafsa: {
+    name: "Hafsa Hajir",
+    image:
+      "https://gravatar.com/avatar/0cfd23e789f550b0187219876cb8f64b779e5c5514a679e6e1722ec1365eaff3?d=retro",
+  },
   kibuchi: {
     name: "Peter Kibuchi",
     image:
@@ -16,6 +21,11 @@ export const BLOG_AUTHORS: Record<
     name: "Peninah Wamweru",
     image:
       "https://gravatar.com/avatar/25249cd395309ed59b3b22785f0e61f35926e31b0b8d67af68847d4bb5c4f6b7?d=retro",
+  },
+  wanjiru: {
+    name: "Wanjiru Wanjiku",
+    image:
+      "https://gravatar.com/avatar/10cda03772fa57eb1fc245078c3190a40500d7312cb3449a5c655ce858ac5766?d=retro",
   },
 };
 
