@@ -6,7 +6,7 @@ import { withContentlayer } from "next-contentlayer2";
  */
 
 // Importing env files here to validate on build
-await import("./src/env.js");
+import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
