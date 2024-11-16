@@ -5,10 +5,13 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write .",
+    "check": "next lint && tsc --noEmit",
+    "dev": "next dev --turbo",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
@@ -18,15 +21,15 @@
     "@vercel/analytics": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "contentlayer2": "^0.5.1",
+    "contentlayer2": "^0.5.3",
     "embla-carousel-autoplay": "^8.3.1",
     "embla-carousel-react": "^8.3.1",
     "lucide-react": "^0.460.0",
-    "next": "^14.2.18",
-    "next-contentlayer2": "^0.5.1",
-    "next-themes": "^0.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "^15.0.3",
+    "next-contentlayer2": "^0.5.3",
+    "next-themes": "^0.4.3",
+    "react": "19.0.0-rc.1",
+    "react-dom": "19.0.0-rc.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.1",
@@ -37,12 +40,12 @@
     "@tailwindcss/typography": "^0.5.15",
     "@types/eslint": "^8.56.12",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.18",
+    "eslint-config-next": "^15.0.3",
     "mdast-util-toc": "^7.1.0",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
@@ -58,7 +61,13 @@
     "unist-util-visit": "^5.0.0"
   },
   "ct3aMetadata": {
-    "initVersion": "7.25.1"
+    "initVersion": "7.38.1"
   },
-  "packageManager": "pnpm@9.13.2"
+  "packageManager": "pnpm@9.13.2",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }
