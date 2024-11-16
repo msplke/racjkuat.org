@@ -6,6 +6,11 @@ export const BLOG_AUTHORS: Record<
     link?: string;
   }
 > = {
+  eliza: {
+    name: "Elizabeth Kamau",
+    image:
+      "https://gravatar.com/avatar/833dc869548f1c4cf789a9fed733def2aae92697070cb31066b883ea6f91d4aa?d=retro",
+  },
   hafsa: {
     name: "Hafsa Hajir",
     image:
