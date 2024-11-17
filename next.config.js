@@ -6,11 +6,24 @@ import { withContentlayer } from "next-contentlayer2";
  */
 
 // Importing env files here to validate on build
-import("./src/env.js");
+await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
-  images: { remotePatterns: [{ protocol: "https", hostname: "gravatar.com" }] },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "gravatar.com",
+        pathname: "/avatar/**",
+      },
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+        pathname: "/a/cxjgggfg3h/**",
+      },
+    ],
+  },
 
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
