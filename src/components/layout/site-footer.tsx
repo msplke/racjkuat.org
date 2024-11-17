@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icons } from "~/components/icons";
 import { buttonVariants } from "~/components/ui/button";
 import { footerItems } from "~/config/marketing";
+import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 import { MaxWidthWrapper } from "../max-width-wrapper";
 
@@ -15,6 +16,17 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             <Icons.logo />
             <p className="text-center text-sm leading-loose md:text-left">
               Copyright © {new Date().getFullYear()} Rotaract Club of JKUAT.
+              Created by{" "}
+              <Link
+                href="https://github.com/peterkibuchi"
+                target="_blank"
+                referrerPolicy="no-referrer"
+              >
+                <span className="font-medium underline underline-offset-4">
+                  {siteConfig.creator}
+                </span>
+              </Link>
+              .
             </p>
           </div>
 
