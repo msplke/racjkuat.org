@@ -15,8 +15,8 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <div className="flex flex-col items-center gap-4 px-0 md:flex-row md:gap-2">
             <Icons.logo />
             <p className="text-center text-sm leading-loose md:text-left">
-              Copyright © {new Date().getFullYear()} Rotaract Club of JKUAT.
-              Created by{" "}
+              © {new Date().getFullYear()} Rotaract Club of JKUAT.
+              <br className="md:hidden" /> Created by{" "}
               <Link
                 href="https://github.com/peterkibuchi"
                 target="_blank"
