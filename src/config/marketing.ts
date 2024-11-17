@@ -87,53 +87,67 @@ export const benefits: BenefitItem[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "John Doe",
-    classification: "Full Stack Developer",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Denise Mbugua",
+    classification: "Marine Engineering",
+    image: "/avatars/denise.png",
     review:
-      "The next-saas-stripe-starter repo has truly revolutionized my development workflow. With its comprehensive features and seamless integration with Stripe, I've been able to build and deploy projects faster than ever before. The documentation is clear and concise, making it easy to navigate through the setup process. I highly recommend next-saas-stripe-starter to any developer.",
+      "Being a part of Rac JKUAT has been the best experience in my university life. ❤️",
   },
   {
-    name: "Alice Smith",
-    classification: "UI/UX Designer",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Mitchelle Mose",
+    classification: "Architecture",
+    image: "/avatars/mose.png",
     review:
-      "Thanks to next-saas-stripe-starter, I've been able to create modern and attractive user interfaces in record time. The starter kit provides a solid foundation for building sleek and intuitive designs, allowing me to focus more on the creative aspects of my work.",
+      "Rotaract has really helped me keep my sanity in University which really hasn't been easy. The people, their energy, love, togetherness and fun keeps me going though they may not be aware of this. I'm thankful for the society and hope it blesses many more people.",
   },
   {
-    name: "David Johnson",
-    classification: "DevOps Engineer",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Traicy Akinyi",
+    classification: "Applied Mathematics and Statistics",
+    image: "/avatars/traicy.png",
     review:
-      "Thanks to next-saas-stripe-starter, I was able to streamline the entire process and get payments up and running in no time. ",
+      "Personally I'm a very social person, an extrovert labda. But despite that, kukuwa extrovert has not helped me so much kwa side ya kumeet new people. Yes I'm good with crowds and all that but sasa ikifika the time nafaa kuapproach people and get to know them ile ya kabisa, the introverted side of me tends to come out. I joined Rotaract because my close friend was the club president at that time and alikuwa amenipush sana to come for their meetings, and I'm glad I did. Rotaract has helped me so much to not feel afraid to express myself in front of people. Watu wa Rotaract ni watu very social, hutaboeka. So most of the times huwa najipata nimecreate bonds with people ata I couldn't expect nikuwe friends na wao. That has been a big step for me and I'm proud of myself. I'm really grateful for that.",
   },
   {
-    name: "Michael Wilson",
-    classification: "Project Manager",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Christine Thomas",
+    classification: "Mathematics and Computer Science",
+    image: "/avatars/tina.png",
     review:
-      "I'm impressed by the quality of code and clear documentation of next-saas-stripe-starter. Kudos to the team!",
+      "Rac JKUAT has been everything for me. My mantra in life has been, 'Our main purpose is to help others in life and if you can't, at the very least don't hurt them.' Rac JKUAT has enabled me to be more compassionate, kind, empathetic, less selfish, and above all to be of service to the community and people around me, therefore living my mantra. The best part of it all is that I get to do this while having fun which is amazing❗️ Rac JKUAT has been amazing. 💯",
   },
   {
-    name: "Sophia Garcia",
-    classification: "Data Analyst",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Hilda Chepkirui",
+    classification: "Electronics and Computer Engineering",
+    image: "/avatars/hilda.png",
     review:
-      "next-saas-stripe-starter provided me with the tools I needed to efficiently manage user data. Thank you so much!",
+      "Rac JKUAT means family, friends, service and fun wrapped in one. I've have grown professionally, gained leadership skills, built networks and friendships. I still have more to gain and a lot to learn.",
   },
   {
-    name: "Emily Brown",
-    classification: "Marketing Manager",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Miles Mwere",
+    classification: "Statistics",
+    image: "/avatars/miles.png",
     review:
-      "next-saas-stripe-starter has been an invaluable asset in my role as a marketing manager. With its seamless integration with Stripe, I've been able to launch targeted marketing campaigns with built-in payment functionality, allowing us to monetize our products and services more effectively.",
+      "It gave me a place to live, I don't usually interact with that many people but it has been a platform for meeting new people, making new memories, having fun and generally being a better version of myself. I love that it is a community that focuses on giving back and helping those in need, and that part really sits tight with me. My only regret is that I didn't join sooner. 😂😭 But all in all I LOVE IT OVER HERE. ❤️",
   },
   {
-    name: "Jason Stan",
-    classification: "Web Designer",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    name: "Faith Mwangi",
+    classification: "Civil Engineering",
+    image: "/avatars/aisee.png",
     review:
-      "Thanks to next-saas-stripe-starter, I've been able to create modern and attractive user interfaces in record time. The starter kit provides a solid foundation for building sleek and intuitive designs, allowing me to focus more on the creative aspects of my work.",
+      "I've gained amazing friendships from Rotaract. It's such a loving community. ❤️ It amazes me how young people come together to serve and who have such fun while at it. 🥹❤️",
+  },
+  {
+    name: "Peter Kibuchi",
+    classification: "Computer Science",
+    image: "/avatars/kibuchi.png",
+    review:
+      "I mean, what can I say? I'm lost for words. Through this club I have been able to give back to the community, and have more impact than I ever could, had I been working alone. I have met countless wonderful people and professionals, many of whom have gone on to become close friends and associates. I have grown, both professionally and personally, beyond anything my wildest imagination could have conceived when I first joined. But perhaps most importantly, the club has empowered me to express my creativity, to create something out of nothing, to push the limits of what I thought possible, and to discover my innermost authentic self. For this and for much more I didn't capture here, I will be eternally grateful.",
+  },
+  {
+    name: "Julian Ndile",
+    classification: "Architecture",
+    image: "/avatars/julian.png",
+    review:
+      "Kidogo nipate mtu alafu akaniponyoka... lakini kuna mwingine ako mahali nimemark... Jokes aside, community service at Muthiga is super fulfilling, the talks we have are enlightening, and the fun we have in service and development is unmatched. 🥂",
   },
 ];
 
