@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
   url: getBaseUrl(),
   description: "Home to the Rotaract Club of Jkuat. Create Hope in the World.",
   creator: "Peter Kibuchi",
-  authors: [{ name: "Peter Kibuchi", url: "https://peterkibuchi.vercel.app" }],
+  authors: [{ name: "Peter Kibuchi", url: "https://github.com/peterkibuchi" }],
   keywords: ["Rotaract", "Rotary"],
   ogImage: `${getBaseUrl()}/og.png`,
   links: {
