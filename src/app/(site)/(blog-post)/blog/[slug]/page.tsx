@@ -28,12 +28,11 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata | undefined> {
-  const post = allPosts.find((post) => post.slugAsParams === params.slug);
+  const { slug } = await props.params;
+  const post = allPosts.find((post) => post.slugAsParams === slug);
   if (!post) return;
 
   const { title, description, image } = post;
@@ -47,12 +46,11 @@ export async function generateMetadata({
   });
 }
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string };
+export default async function PostPage(props: {
+  params: Promise<{ slug: string }>;
 }) {
-  const post = allPosts.find((post) => post.slugAsParams === params.slug);
+  const { slug } = await props.params;
+  const post = allPosts.find((post) => post.slugAsParams === slug);
 
   if (!post) notFound();
 

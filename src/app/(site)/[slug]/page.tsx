@@ -12,12 +12,11 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata | undefined> {
-  const page = allPages.find((page) => page.slugAsParams === params.slug);
+  const { slug } = await props.params;
+  const page = allPages.find((page) => page.slugAsParams === slug);
 
   if (!page) return;
 
@@ -31,8 +30,11 @@ export async function generateMetadata({
   });
 }
 
-export default function PagePage({ params }: { params: { slug: string } }) {
-  const page = allPages.find((page) => page.slugAsParams === params.slug);
+export default async function PagePage(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await props.params;
+  const page = allPages.find((page) => page.slugAsParams === slug);
 
   if (!page) notFound();
 
