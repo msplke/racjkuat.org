@@ -20,7 +20,7 @@
     "@vercel/analytics": "^1.4.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "contentlayer2": "^0.5.3",
+    "contentlayer2": "^0.5.4",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.475.0",
