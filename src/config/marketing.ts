@@ -24,31 +24,31 @@ export const marketingConfig: MarketingConfig = {
 export const previewImages: PreviewImage[] = [
   {
     title: "club-hangout-2023",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtRIHtkpPdpC4aPEXDMFLft6r78qoUj50WRcKJl",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtRIHtkpPdpC4aPEXDMFLft6r78qoUj50WRcKJl",
   },
   {
     title: "muthiga-2022",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtR3nNlH0fYvPkRr24G8XYsKtfDiM0IcEOBaqmn",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtR3nNlH0fYvPkRr24G8XYsKtfDiM0IcEOBaqmn",
   },
   {
     title: "fancied-friends",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtRTuWTPlgCmpvGYPOEhbiyQHuUZLCS34JaIq0t",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtRTuWTPlgCmpvGYPOEhbiyQHuUZLCS34JaIq0t",
   },
   {
     title: "maisha-safe-house-2024",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtRUX9yS5tPTBKkqpXz2Y40IvSDGhCWAJj5lyex",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtRUX9yS5tPTBKkqpXz2Y40IvSDGhCWAJj5lyex",
   },
   {
     title: "beautiful-people",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtRTNYiEvCmpvGYPOEhbiyQHuUZLCS34JaIq0tc",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtRTNYiEvCmpvGYPOEhbiyQHuUZLCS34JaIq0tc",
   },
   {
     title: "beautiful-smiles",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtRYjvxXDO2tkZI0sJEzmL5UQ8iXNHS7ahMnF9u",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtRYjvxXDO2tkZI0sJEzmL5UQ8iXNHS7ahMnF9u",
   },
   {
     title: "membership-drive-2024",
-    href: "https://utfs.io/a/cxjgggfg3h/NiN0ZwlP2DtR54Mdlha02fpy48GBsHbhDYP3kwugqExmTMNK",
+    href: "https://cxjgggfg3h.ufs.sh/f/NiN0ZwlP2DtR54Mdlha02fpy48GBsHbhDYP3kwugqExmTMNK",
   },
 ];
 

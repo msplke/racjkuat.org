@@ -1,21 +1,19 @@
+import { type NextConfig } from "next";
 import { withContentlayer } from "next-contentlayer2";
 
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
  */
+import "./src/env.js";
 
-// Importing env files here to validate on build
-await import("./src/env.js");
-
-/** @type {import("next").NextConfig} */
-const config = {
+const config: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "utfs.io",
-        pathname: "/a/cxjgggfg3h/**",
+        hostname: "cxjgggfg3h.ufs.sh",
+        pathname: "/f/*",
       },
     ],
   },
