@@ -11,7 +11,7 @@ import type {
 export const marketingConfig: MarketingConfig = {
   mainNav: [
     {
-      title: "About",
+      title: "About Us",
       href: "/about",
     },
     {
@@ -133,14 +133,21 @@ export const testimonials: Testimonial[] = [
     classification: "Civil Engineering",
     image: "/avatars/aisee.png",
     review:
-      "I've gained amazing friendships from Rotaract. It's such a loving community. ❤️ It amazes me how young people come together to serve and who have such fun while at it. 🥹❤️",
+      "I've gained amazing friendships from Rotaract. It's such a loving community. ❤️ It amazes me how young people come together to serve and have such fun while at it. 🥹❤️",
   },
   {
-    name: "Peter Kibuchi",
-    classification: "Computer Science",
-    image: "/avatars/kibuchi.png",
+    name: "Elzabeth Kamau",
+    classification: "Human Resource Management",
+    image: "/avatars/eliza.png",
     review:
-      "I mean, what can I say? I'm lost for words. Through this club I have been able to give back to the community, and have more impact than I ever could, had I been working alone. I have met countless wonderful people and professionals, many of whom have gone on to become close friends and associates. I have grown, both professionally and personally, beyond anything my wildest imagination could have conceived when I first joined. But perhaps most importantly, the club has empowered me to express my creativity, to create something out of nothing, to push the limits of what I thought possible, and to discover my innermost authentic self. For this and for much more I didn't capture here, I will be eternally grateful.",
+      "From the first fellowship I attended, the vibe and energy was right. You don't really get that the first time you join somewhere. Also, I've met and interacted with amazing people. I have gained a family for sure.  😊",
+  },
+  {
+    name: "Caleb Odhiambo",
+    classification: "Electrical and Electronic Engineering",
+    image: "/avatars/caleb.png",
+    review:
+      "I have enjoyed my time as an aspiring member. The selflessness displayed by the Rotaractors during service was striking and is something I look forward to applying during my time as a member of RAC JKUAT and beyond. I will find it hard to forget the smiles I saw during the community service projects I've attended. I think selflessness is a good principle to live by. I was also encouraged by the mother club visits and the short talks with industry professionals which have been of great importance to me. They serve as encouragement to keep working on my academics in order to achieve what they have and maybe even more. I look forward to my time as a Rotaractor.",
   },
   {
     name: "Julian Ndile",

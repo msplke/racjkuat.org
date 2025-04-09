@@ -33,12 +33,15 @@ export function Testimonials() {
                         <p className="text-sm font-semibold text-foreground">
                           {item.name}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs text-muted-foreground">
                           {item.classification}
                         </p>
                       </div>
                     </div>
-                    <q className="text-muted-foreground">{item.review}</q>
+
+                    <q className="text-sm text-muted-foreground">
+                      {item.review}
+                    </q>
                   </div>
                 </div>
               </div>
