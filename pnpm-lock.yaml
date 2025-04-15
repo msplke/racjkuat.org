@@ -24,8 +24,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       contentlayer2:
-        specifier: ^0.5.5
-        version: 0.5.5(esbuild@0.19.10)
+        specifier: ^0.5.7
+        version: 0.5.7(esbuild@0.19.10)
       embla-carousel-autoplay:
         specifier: ^8.6.0
         version: 8.6.0(embla-carousel@8.6.0)
@@ -40,7 +40,7 @@ importers:
         version: 15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-contentlayer2:
         specifier: ^0.5.5
-        version: 0.5.5(contentlayer2@0.5.5(esbuild@0.19.10))(esbuild@0.19.10)(next@15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 0.5.5(contentlayer2@0.5.7(esbuild@0.19.10))(esbuild@0.19.10)(next@15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -177,11 +177,11 @@ packages:
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
-  '@contentlayer2/cli@0.5.5':
-    resolution: {integrity: sha512-N0Jn0kj4XG6MzeYREYPxpT7/q+IZz+/C626cTjP21Gs0Ei0XYrdKoTVLBg32bwVhwvwgTm8miV5+F3vJc9ZFXg==}
+  '@contentlayer2/cli@0.5.7':
+    resolution: {integrity: sha512-JNsBZ2Axfjw5ig9fmawzNafmq+m5zL1/5viMKyVAC0be95DET2Lnkn5ySLB3Uv72m3WaYGDc4Qi3+ZAhMDdgYQ==}
 
-  '@contentlayer2/client@0.5.5':
-    resolution: {integrity: sha512-YOTQIIDh+Krit5LOEI87eWooz+1HNOYI2tkGZivs7+VRc2nPVvvHTX6Ry9+FxQ0gSDmFQw5luxiWwhlIpcP2bQ==}
+  '@contentlayer2/client@0.5.7':
+    resolution: {integrity: sha512-eavZk1L8EqWvfz7IKR4+9MIMwObSRGl7WNuXOAGF7YAalYq8uul2cNpy9YO9HsxCWG3M8fcovXCp2Wsg/aJjZg==}
 
   '@contentlayer2/core@0.5.5':
     resolution: {integrity: sha512-VAGcRSNPLd6SGS+NaVHbLqdAAXjezU45nSExzkSCGXSCIVRA9Uj63XYKUHQDD6hbdvPFBpLKzcoEFa6kGKZRxg==}
@@ -194,14 +194,33 @@ packages:
       markdown-wasm:
         optional: true
 
-  '@contentlayer2/source-files@0.5.5':
-    resolution: {integrity: sha512-TEVSn4T5RlASHQ0kCtV/DHpMfDc5Yg/U2v24RWyiTKp/yDq3iD04EFCw/O4x1LHpiUcFtKCW4waF0J6KNOxd4w==}
+  '@contentlayer2/core@0.5.7':
+    resolution: {integrity: sha512-tJnIHnW/n5hywQX3fPnV5D4n5jfuOggPSMdSdS09hs8UEBcmac4JD74P3yXyktjHVUPE8206vyy+vlZEvNtJFA==}
+    peerDependencies:
+      esbuild: '>=0.17'
+      markdown-wasm: 1.x
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      markdown-wasm:
+        optional: true
 
-  '@contentlayer2/source-remote-files@0.5.5':
-    resolution: {integrity: sha512-d/8LDXtAUmncaCSSjKt0BsRq7N5hisbtoF19ASGStJ179K5btUMBt4KEwBzg0UTE2iY4kXBUpn8MZmYVHy7VBg==}
+  '@contentlayer2/source-files@0.5.7':
+    resolution: {integrity: sha512-/PxhfjHFU6E7adDDPtbTNBBwCfgC08lsYMyiztDu3Sl/aucSj5T4ySr9KNDHRgxGuBP7hL094frD1BRuckUWRw==}
+
+  '@contentlayer2/source-remote-files@0.5.7':
+    resolution: {integrity: sha512-ckWHVumgUDW8NNEOW7yELUuHsV80OkDot5rGFrgct5mTbRQmRTjVZioCQ2iMnNJC8rBL0rRDacR8kPqZboG51Q==}
 
   '@contentlayer2/utils@0.5.5':
     resolution: {integrity: sha512-VnfwvIszsIfyIhkMsDutuVgKyeSwN36Mv+ClPl9fuTejR0uiKCyOKdGQTHJ2b5LDE+fFuySd2pTE7GDVXLBjTg==}
+    peerDependencies:
+      '@effect-ts/otel-node': '*'
+    peerDependenciesMeta:
+      '@effect-ts/otel-node':
+        optional: true
+
+  '@contentlayer2/utils@0.5.7':
+    resolution: {integrity: sha512-H2FO1DPglqrUI92OLqv/jGANioAzgrYBgkoYbpKuTsvX5BnGShw4aLWq797thhrrm9w2q5JSDhZOwP+WGbH2XQ==}
     peerDependencies:
       '@effect-ts/otel-node': '*'
     peerDependenciesMeta:
@@ -1474,8 +1493,8 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  contentlayer2@0.5.5:
-    resolution: {integrity: sha512-nz+pVYiY+k12G09Ty006xeIFB4ZgNQB8sZbzH6U2rvxcEOWGyPNZ/xbfuGGUu7I97DHcVgwxWh9zZUuL/4vsuQ==}
+  contentlayer2@0.5.7:
+    resolution: {integrity: sha512-V9IyQtJBlRg3+vbvVb0sjKj/guFAJdCRCuXt4jKEJqMxYZ6Rp7SRAZRd4uhX67b7g6s3ss5jeBYNaPvM8A5s5Q==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3394,10 +3413,10 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@contentlayer2/cli@0.5.5(esbuild@0.19.10)':
+  '@contentlayer2/cli@0.5.7(esbuild@0.19.10)':
     dependencies:
-      '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/utils': 0.5.5
+      '@contentlayer2/core': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/utils': 0.5.7
       clipanion: 3.2.1(typanion@3.14.0)
       typanion: 3.14.0
     transitivePeerDependencies:
@@ -3406,9 +3425,9 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/client@0.5.5(esbuild@0.19.10)':
+  '@contentlayer2/client@0.5.7(esbuild@0.19.10)':
     dependencies:
-      '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
+      '@contentlayer2/core': 0.5.7(esbuild@0.19.10)
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -3435,10 +3454,30 @@ snapshots:
       - '@effect-ts/otel-node'
       - supports-color
 
-  '@contentlayer2/source-files@0.5.5(esbuild@0.19.10)':
+  '@contentlayer2/core@0.5.7(esbuild@0.19.10)':
     dependencies:
-      '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/utils': 0.5.5
+      '@contentlayer2/utils': 0.5.7
+      camel-case: 4.1.2
+      comment-json: 4.2.3
+      gray-matter: 4.0.3
+      mdx-bundler: 10.1.1(esbuild@0.19.10)
+      rehype-stringify: 10.0.0
+      remark-frontmatter: 5.0.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.0
+      source-map-support: 0.5.21
+      type-fest: 4.20.0
+      unified: 11.0.5
+    optionalDependencies:
+      esbuild: 0.19.10
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - supports-color
+
+  '@contentlayer2/source-files@0.5.7(esbuild@0.19.10)':
+    dependencies:
+      '@contentlayer2/core': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/utils': 0.5.7
       chokidar: 3.6.0
       fast-glob: 3.3.2
       gray-matter: 4.0.3
@@ -3454,11 +3493,11 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-  '@contentlayer2/source-remote-files@0.5.5(esbuild@0.19.10)':
+  '@contentlayer2/source-remote-files@0.5.7(esbuild@0.19.10)':
     dependencies:
-      '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/source-files': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/utils': 0.5.5
+      '@contentlayer2/core': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/source-files': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/utils': 0.5.7
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -3466,6 +3505,27 @@ snapshots:
       - supports-color
 
   '@contentlayer2/utils@0.5.5':
+    dependencies:
+      '@effect-ts/core': 0.60.5
+      '@effect-ts/otel': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))
+      '@effect-ts/otel-sdk-trace-node': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@1.30.1(@opentelemetry/api@1.9.0))
+      '@js-temporal/polyfill': 0.4.4
+      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/exporter-trace-otlp-grpc': 0.57.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/resources': 1.30.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base': 1.30.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-node': 1.30.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/semantic-conventions': 1.29.0
+      chokidar: 3.6.0
+      hash-wasm: 4.11.0
+      inflection: 3.0.0
+      memfs: 4.9.2
+      oo-ascii-tree: 1.99.0
+      ts-pattern: 5.1.2
+      type-fest: 4.20.0
+
+  '@contentlayer2/utils@0.5.7':
     dependencies:
       '@effect-ts/core': 0.60.5
       '@effect-ts/otel': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))
@@ -4687,14 +4747,14 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  contentlayer2@0.5.5(esbuild@0.19.10):
+  contentlayer2@0.5.7(esbuild@0.19.10):
     dependencies:
-      '@contentlayer2/cli': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/client': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/source-files': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/source-remote-files': 0.5.5(esbuild@0.19.10)
-      '@contentlayer2/utils': 0.5.5
+      '@contentlayer2/cli': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/client': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/core': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/source-files': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/source-remote-files': 0.5.7(esbuild@0.19.10)
+      '@contentlayer2/utils': 0.5.7
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -4995,16 +5055,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.30.1(eslint@9.24.0(jiti@1.21.6))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.24.0(jiti@1.21.6)):
-    dependencies:
-      debug: 3.2.7
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.30.1(eslint@9.24.0(jiti@1.21.6))(typescript@5.8.3)
-      eslint: 9.24.0(jiti@1.21.6)
-      eslint-import-resolver-node: 0.3.9
-    transitivePeerDependencies:
-      - supports-color
-
   eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.30.1(eslint@9.24.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.24.0(jiti@1.21.6)):
     dependencies:
       '@rtsao/scc': 1.1.0
@@ -5016,7 +5066,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.24.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.30.1(eslint@9.24.0(jiti@1.21.6))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.24.0(jiti@1.21.6))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.29.1(eslint@9.24.0(jiti@1.21.6))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@9.24.0(jiti@1.21.6))
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -6221,11 +6271,11 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-contentlayer2@0.5.5(contentlayer2@0.5.5(esbuild@0.19.10))(esbuild@0.19.10)(next@15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  next-contentlayer2@0.5.5(contentlayer2@0.5.7(esbuild@0.19.10))(esbuild@0.19.10)(next@15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@contentlayer2/core': 0.5.5(esbuild@0.19.10)
       '@contentlayer2/utils': 0.5.5
-      contentlayer2: 0.5.5(esbuild@0.19.10)
+      contentlayer2: 0.5.7(esbuild@0.19.10)
       next: 15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
