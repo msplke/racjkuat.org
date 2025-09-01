@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
   keywords: ["Rotaract", "Rotary"],
   ogImage: `${getBaseUrl()}/og.png`,
   links: {
-    github: "https://github.com/msplke/racjkuat.org",
+    github: "https://github.com/peterkibuchi/racjkuat.org",
     instagram: "https://instagram.com/racjkuat",
     tiktok: "https://tiktok.com/@racjkuat",
     twitter: "https://x.com/racjkuat",
